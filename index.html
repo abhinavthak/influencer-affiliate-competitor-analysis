@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Influencer Affiliate Competitor Analysis</title>
+<meta name="description" content="How online universities and edtechs in India pay people to promote degrees, and what to build for JGU Online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14213D; --txt:#33394A; --mute:#6B7280; --faint:#9AA1B1;
+  --paper:#FFFFFF; --bg:#F6F7FB; --line:#E4E7EF; --line2:#EDEFF5;
+  --teal:#0E8E88; --indigo:#2E2A83; --accent:#2A4BD7;
+  --info-bg:#EFF5FF; --info-bd:#C7DBFF; --info-tx:#1D4ED8;
+  --ok-bg:#EAF7EE; --ok-bd:#BCE4C7; --ok-tx:#15803D;
+  --warn-bg:#FFF7E6; --warn-bd:#F5DE9E; --warn-tx:#92660C;
+  --new-bg:#F3EEFF; --new-bd:#DACBFB; --new-tx:#5B32C4;
+  --code-bg:#F4F5F9;
+  --r:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Sora,Inter,sans-serif;color:var(--ink);letter-spacing:-0.01em;margin:0}
+code,.mono{font-family:"JetBrains Mono",monospace}
+a{color:var(--accent)}
+.hero{background:linear-gradient(115deg,#14ACA3 0%,#1C6FA8 45%,#2E2A83 100%);padding:64px 48px 46px;color:#fff}
+.hero .kicker{font-size:13px;font-weight:600;letter-spacing:.03em;color:rgba(255,255,255,.78);margin-bottom:10px}
+.hero h1{color:#fff;font-size:32px;font-weight:700;max-width:820px}
+.hero p{color:rgba(255,255,255,.86);max-width:620px;margin:12px 0 0;font-size:15px;line-height:1.6}
+.hero .meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:rgba(255,255,255,.8)}
+.hero .meta b{color:#fff;font-weight:600}
+
+.shell{display:grid;grid-template-columns:252px minmax(0,1fr);max-width:1180px;margin:-28px auto 0;gap:0}
+.toc{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;padding:34px 18px 40px 8px}
+.toc-h{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);padding:0 12px 10px}
+.toc a{display:flex;align-items:baseline;gap:10px;padding:8px 12px;border-radius:8px;color:var(--txt);text-decoration:none;font-size:13px;line-height:1.4;margin-bottom:1px}
+.toc a:hover{background:var(--line2)}
+.toc a .idx{font-size:11px;color:var(--faint);min-width:14px;flex:none;font-variant-numeric:tabular-nums}
+.toc a .lbl{flex:1;min-width:0}
+.toc a .dot{width:6px;height:6px;border-radius:50%;background:var(--warn-tx);flex:none;align-self:center}
+
+.main{padding:34px 40px 90px;min-width:0}
+section{margin-bottom:52px;scroll-margin-top:18px}
+section h2{font-size:22px;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:16px}
+section h2 .num{color:var(--faint);font-weight:500;margin-right:9px}
+h3{font-size:16.5px;margin:26px 0 10px}
+h3 .num{color:var(--faint);font-weight:500;margin-right:6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:5px}
+.lead{font-size:16px;color:var(--txt)}
+
+.callout{border-radius:var(--r);padding:14px 16px;margin:16px 0;border:1px solid;font-size:14.5px;line-height:1.6}
+.callout.info{background:var(--info-bg);border-color:var(--info-bd);color:#1E3A6E}
+.callout.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:#0F5A2A}
+.callout .ttl{font-weight:600;display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.callout.warn{background:var(--warn-bg);border-color:var(--warn-bd);color:#5C3D06}
+.callout.warn .ttl{color:var(--warn-tx)}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 9px;border-radius:20px;line-height:1.7}
+.tag.gap{background:var(--warn-bg);color:var(--warn-tx);border:1px solid var(--warn-bd)}
+.tag.src{background:var(--ok-bg);color:var(--ok-tx);border:1px solid var(--ok-bd)}
+.tag.ex{background:var(--bg2,#f1f1f4);color:#555;border:1px solid #ddd}
+.tag.ph{background:none;border:0;color:#6B62B8;margin-left:7px;padding:0;font-size:9.5px;font-weight:700;letter-spacing:.08em;line-height:1;white-space:nowrap;vertical-align:2px}
+
+table{width:100%;border-collapse:collapse;margin:14px 0 18px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;font-size:14px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line2);vertical-align:top}
+th{background:#FAFBFD;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:700}
+.fixed{table-layout:fixed}
+.fixed th{white-space:normal;line-height:1.4}
+.event-table{table-layout:fixed}
+.event-table td{vertical-align:middle}
+.event-table td code{font-size:11.5px;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td code{font-size:12.5px;background:var(--code-bg);padding:1px 6px;border-radius:5px}
+.center{text-align:center}
+.mini{font-size:12.5px;color:var(--mute)}
+.wrap{overflow-x:auto}
+.sec-table{min-width:720px;font-size:13.5px}
+.sec-table td{padding:12px 12px}
+.cl{margin:0;padding-left:16px}
+.cl li{margin-bottom:3px}
+.wdg{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);margin:14px 0;overflow:hidden}
+.wdg-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;padding:12px 14px;background:#FAFBFD;border-bottom:1px solid var(--line2)}
+.wdg-h b{font-family:Sora,Inter,sans-serif;color:var(--ink);font-size:14.5px}
+.wid{font-size:11px;font-weight:700;color:#fff;background:var(--indigo);border-radius:6px;padding:1px 7px}
+.whh{font-size:10.5px;font-weight:600;color:var(--mute);border:1px solid var(--line);border-radius:20px;padding:0 7px}
+.wj{flex-basis:100%;font-size:13px;color:var(--mute)}
+.wdg table{border:0;border-radius:0;margin:0}
+.wt{min-width:600px;font-size:13.5px}
+.rq{display:inline-block;font-size:11px;font-weight:700;padding:1px 9px;border-radius:20px;white-space:nowrap}
+.rq.r{background:#FDE7E7;color:#B42318}.rq.o{background:var(--line2);color:var(--mute)}.rq.a{background:var(--info-bg);color:var(--info-tx)}
+.cta{display:inline-block;background:var(--ink);color:#fff;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:20px;margin:0 4px 5px 0;line-height:1.4;max-width:100%}
+
+.flows{display:flex;gap:28px;flex-wrap:wrap}
+.flow{display:flex;flex-direction:column;gap:10px;flex:1;min-width:260px;max-width:400px;margin:12px 0 20px}
+.flow-h{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:2px}
+.flow .step{border-radius:9px;padding:12px 16px;color:#fff;position:relative}
+.flow .step b{display:block;font-size:14px;font-weight:600}
+.flow .step span{font-size:12.5px;opacity:.85}
+.flow .step:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-11px;width:1.5px;height:10px;background:var(--faint)}
+.s1{background:#4B5261}.s2{background:#4A3FA0}.s3{background:#4A3FA0}.s4{background:#B0522A}.s5{background:#0E7A63}
+
+.jflow{margin:14px 0 10px}
+.jrow,.jvoid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.jvoid{margin-top:30px}
+.jn,.jv{position:relative;border-radius:9px;padding:10px 11px 12px;font-size:12.5px;line-height:1.45}
+.jn{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--faint)}
+.jn.c1{border-top-color:#4B5261}.jn.c2{border-top-color:#4A3FA0}.jn.c3{border-top-color:#B0522A}.jn.c4{border-top-color:#0E7A63}
+.jn:not(:last-child)::after{content:"";position:absolute;right:-20px;top:50%;width:14px;height:14px;transform:translateY(-50%);background:no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M1 7h11M8 3l4 4-4 4' fill='none' stroke='%239AA1B1' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.jv{background:var(--warn-bg);border:1.5px dashed var(--warn-bd)}
+.jv::before{content:"";position:absolute;left:50%;top:-31px;height:30px;border-left:1.5px dashed var(--warn-tx)}
+.jk{font-size:10.5px;font-weight:700;color:var(--faint);letter-spacing:.04em}
+.jvf{font-size:10.5px;font-weight:700;color:var(--warn-tx);text-transform:uppercase;letter-spacing:.04em}
+.jt{font-family:Sora,Inter,sans-serif;font-weight:600;color:var(--ink);font-size:13px;margin:2px 0 4px}
+.jd{color:var(--mute);margin-bottom:8px}
+.pill{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 9px;border-radius:20px;white-space:nowrap}
+.p-pend{background:var(--line2);color:var(--mute)}
+.p-sched{background:var(--info-bg);color:var(--info-tx)}
+.p-sent{background:var(--ok-bg);color:var(--ok-tx)}
+.p-void{background:#FBE8C8;color:var(--warn-tx)}
+.p-max{background:var(--line2);color:var(--faint)}
+@media(max-width:880px){
+  .jrow,.jvoid{grid-template-columns:1fr;gap:20px}
+  .jvoid{margin-top:20px}
+  .jv{grid-column:auto!important}
+  .jv::before{display:none}
+  .jn:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-18px;transform:translateX(-50%) rotate(90deg)}
+}
+
+.oq-list{border:1px solid var(--warn-bd);background:var(--warn-bg);border-radius:var(--r);padding:6px 18px 6px 36px}
+.oq-list li{margin:10px 0}
+.oq-list b{color:var(--warn-tx)}
+
+/* live simulator */
+.calc{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:20px 22px 24px;margin:18px 0}
+.calc-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.calc-head h4{font-size:15px;margin:0 0 3px}
+.calc-head p{margin:0;font-size:13px;color:var(--mute)}
+.presets{display:flex;gap:8px;flex-wrap:wrap}
+.presets button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 13px;font-size:12.5px;font-weight:500;cursor:pointer;color:var(--txt);font-family:inherit}
+.presets button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.presets button:hover:not(.on){background:var(--line2)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.ctl label{display:block;font-size:12px;font-weight:600;color:var(--mute);margin-bottom:6px}
+.ctl .field{display:flex;align-items:center;height:40px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:0 12px}
+.ctl input[type=range]{width:100%}
+.ctl select{width:100%;height:38px;border:0;padding:0 28px 0 0;font-size:14px;font-weight:500;font-family:inherit;color:var(--ink);cursor:pointer;appearance:none;-webkit-appearance:none;-moz-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 2px center}
+.ctl .field{transition:border-color .15s,box-shadow .15s}
+.ctl .field:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,75,215,.12)}
+.ctl .field:has(select):hover{border-color:var(--faint)}
+.ctl input[type=range]{accent-color:var(--indigo)}
+.ctl select:focus{outline:none}
+.ctl .val{font-weight:700;color:var(--ink);margin-left:10px;min-width:22px;text-align:right}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.cell{border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:12.5px}
+.cell .who{color:var(--mute);font-size:11.5px}
+.cell .amt{font-weight:700;color:var(--ink);font-size:14px;margin-top:2px;white-space:nowrap}
+.cell .tier{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 8px;border-radius:20px;white-space:nowrap}
+.t-Starter{background:#EEF0F4;color:#4B5261}
+.t-Silver{background:#E8EEF8;color:#2F4A7A}
+.t-Gold{background:#FFF3D6;color:#8A5A00}
+.t-void{background:var(--warn-bg);color:var(--warn-tx)}
+.t-cap{background:var(--line2);color:var(--faint)}
+.cell.void{background:#FFFBF2}
+.cell.void .amt{color:var(--faint);text-decoration:line-through}
+.t-c0{background:#EEF0F4;color:#4B5261}.t-c1{background:#E8EEF8;color:#2F4A7A}.t-c2{background:#FFF3D6;color:#8A5A00}.t-c3{background:#EAF7EE;color:#15803D}
+.cset{border:1px solid var(--line);border-radius:10px;background:#FAFBFD;padding:14px 16px}
+.cset-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:10px}
+.cset-h b{font-family:Sora,Inter,sans-serif;color:var(--ink);font-size:14.5px}
+.cset-h button{margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--indigo);cursor:pointer;font-family:inherit}
+.cset-t{width:100%;min-width:460px;border:0;margin:0;background:none;font-size:13px}
+.cset-t th,.cset-t td{padding:5px 6px;border:0;background:none}
+.cset-t th{font-size:11px;text-transform:none;letter-spacing:0;color:var(--mute)}
+.cset-t td:first-child{color:var(--mute);font-size:12px;white-space:nowrap}
+.cset input{width:100%;height:34px;border:1px solid var(--line);border-radius:7px;padding:0 9px;font-size:13.5px;font-family:inherit;color:var(--ink);background:#fff}
+.cset input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,75,215,.12)}
+.cset-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px}
+.cset-row label{font-size:11.5px;font-weight:600;color:var(--mute);display:flex;flex-direction:column;gap:5px}
+.cset-ro{display:flex;flex-direction:column;justify-content:flex-end;gap:5px;font-size:11.5px;font-weight:600;color:var(--mute)}
+.cset-ro b{height:34px;display:flex;align-items:center;font-size:15px;color:var(--ink)}
+.cset-err{margin-top:10px;padding:8px 12px;border-radius:8px;background:var(--warn-bg);border:1px solid var(--warn-bd);color:var(--warn-tx);font-size:12.5px}
+.calc-result{margin-top:16px;padding:13px 16px;border-radius:9px;background:var(--bg);font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line)}
+.calc-note{margin-top:10px;font-size:12px;color:var(--mute)}
+
+.tldr{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--indigo);border-radius:var(--r);padding:16px 20px;margin:4px 0 22px}
+.tldr h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--indigo);margin:0 0 10px}
+.tldr dl{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0;font-size:14.5px}
+.tldr dt{font-weight:600;color:var(--ink)}.tldr dd{margin:0}
+@media(max-width:600px){.tldr dl{grid-template-columns:1fr}.tldr dt{margin-top:6px}}
+details.fields{margin:10px 0 16px}
+details.fields>summary{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 16px;border:1px solid var(--line);background:var(--paper);border-radius:20px;font-size:13px;font-weight:600;color:var(--indigo);cursor:pointer;list-style:none}
+details.fields>summary::-webkit-details-marker{display:none}
+details.fields>summary::after{content:"▾";transition:transform .15s}
+details.fields[open]>summary::after{transform:rotate(180deg)}
+details.fields[open]>summary{margin-bottom:6px}
+.foot-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--mute);border-top:1px solid var(--line);padding-top:20px;margin-top:8px}
+
+@media(max-width:880px){.shell{grid-template-columns:1fr}.toc{position:static;max-height:none}.main{padding:26px 20px 70px}.hero{padding:44px 22px 34px}}
+
+/* hero status card */
+.hero-in{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:end;max-width:1300px}
+.hero-status{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 18px;font-size:13px;color:rgba(255,255,255,.88)}
+.hero-status .hs-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hero-status .hs-row:last-child{border-bottom:0}
+.hero-status b{color:#fff;font-weight:600;text-align:right}
+.hero-status .hs-row>span:first-child{white-space:nowrap}
+.hs-pill{display:inline-block;background:#FDE7B0;color:#7A5200;border-radius:20px;padding:0 9px;font-size:11.5px;font-weight:700}
+@media(max-width:980px){.hero-in{grid-template-columns:1fr}.hero-status{max-width:420px}}
+/* section links */
+a.xref{color:inherit;text-decoration:underline;text-decoration-color:rgba(74,63,160,.45);text-underline-offset:2px;text-decoration-thickness:1px}
+a.xref:hover{color:#4A3FA0;text-decoration-color:#4A3FA0}
+.hero a.xref{text-decoration-color:rgba(255,255,255,.6)}.hero a.xref:hover{color:#fff}
+section h2,section h3{scroll-margin-top:16px}
+.flash{animation:flash 1.6s ease-out}
+@keyframes flash{0%{background:#FFF3C4}100%{background:transparent}}
+/* toc active + subsections */
+.toc a.on{background:#ECEAF8;color:#2E2A83;font-weight:600}
+.toc .sub{display:none;margin:2px 0 8px 24px;border-left:1px solid var(--line)}
+.toc .grp.open .sub{display:block}
+.toc .sub a{font-size:12.5px;padding:5px 10px;color:var(--mute)}
+.toc .sub a.on{background:none;color:#2E2A83;font-weight:600}
+/* what changed */
+.whatsnew{border:1px solid #CFE6DA;background:#F2FAF6;border-radius:14px;padding:16px 20px;margin:18px 0 8px}
+.whatsnew h4{margin:0 0 8px;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#17694A}
+.whatsnew ul{margin:0;padding-left:18px}
+.whatsnew li{margin:4px 0;font-size:14px}
+.whatsnew .mini{margin-top:8px}
+/* lifecycle diagram */
+.lifecycle{overflow-x:auto;margin:10px 0 14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.lifecycle svg{display:block;min-width:720px;width:100%;height:auto}
+/* print */
+@media print{
+  @page{margin:14mm}
+  body{background:#fff}
+  .toc,.presets,.cset button,.ctl,.calc-head .presets{display:none!important}
+  .shell{display:block}
+  .main{padding:0;max-width:none}
+  .hero{background:none!important;color:#111;padding:0 0 14px;border-bottom:2px solid #2E2A83}
+  .hero h1,.hero .meta b,.hero-status b{color:#111}
+  .hero p,.hero .kicker,.hero .meta,.hero-status{color:#333}
+  .hero-status{background:none;border:1px solid #ccc;max-width:360px;margin-top:12px}
+  .hero{margin-bottom:22px}
+  .hero-status .hs-row{border-color:#ddd}
+  a.xref{text-decoration:none}
+  table,.wdg,.callout,.cell,.lifecycle,svg,tr{break-inside:avoid}
+  h2,h3,h4{break-after:avoid}
+  section{break-before:auto}
+  .wrap{overflow:visible}
+}
+/* competitor analysis additions */
+.tag.off{background:var(--ok-bg);color:var(--ok-tx);border:1px solid var(--ok-bd)}
+.tag.tp{background:#F1F2F6;color:#4B5261;border:1px solid var(--line)}
+.tag.uv{background:var(--warn-bg);color:var(--warn-tx);border:1px solid var(--warn-bd)}
+.tag.us{background:var(--new-bg);color:var(--new-tx);border:1px solid var(--new-bd)}
+.models{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0 18px}
+.model{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--indigo);border-radius:var(--r);padding:14px 15px}
+.model .mk{font-size:10.5px;font-weight:700;color:var(--faint);letter-spacing:.05em;text-transform:uppercase}
+.model h4{font-size:14.5px;margin:3px 0 6px}
+.model p{font-size:13px;color:var(--mute);margin:0 0 8px}
+.model .pay{font-size:12.5px;font-weight:600;color:var(--ink)}
+.model.m1{border-top-color:#0E7A63}.model.m2{border-top-color:#1C6FA8}.model.m3{border-top-color:#4A3FA0}.model.m4{border-top-color:#B0522A}.model.m5{border-top-color:#4B5261}
+.prof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line2)}
+.prof>div{padding:12px 14px;font-size:13.5px}
+.prof>div:first-child{border-right:1px solid var(--line2)}
+.prof h5{margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.prof ul{margin:0;padding-left:16px}
+.prof li{margin-bottom:3px}
+.wdg .facts{padding:12px 14px;font-size:13.5px}
+.wdg .facts dl{display:grid;grid-template-columns:130px 1fr;gap:6px 14px;margin:0}
+.wdg .facts dt{font-weight:600;color:var(--ink)}.wdg .facts dd{margin:0}
+.wdg .take{padding:10px 14px;background:var(--new-bg);border-top:1px solid var(--new-bd);font-size:13.5px;color:#3B2380}
+.wdg .take b{color:var(--new-tx)}
+@media(max-width:700px){.prof{grid-template-columns:1fr}.prof>div:first-child{border-right:0;border-bottom:1px solid var(--line2)}.wdg .facts dl{grid-template-columns:1fr}}
+.y{color:var(--ok-tx);font-weight:700}.n{color:#B42318;font-weight:700}.p{color:var(--warn-tx);font-weight:700}
+.cmp td:first-child{font-weight:600;color:var(--ink)}
+.cmp tr.us td{background:#F7F4FF}
+.gapgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0}
+.gapc{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.gapc .gn{font-family:Sora,Inter,sans-serif;font-size:22px;font-weight:700;color:var(--indigo);line-height:1}
+.gapc h4{font-size:14.5px;margin:8px 0 6px}
+.gapc p{font-size:13.5px;margin:0;color:var(--txt)}
+.gapc .who{font-size:12px;color:var(--mute);margin-top:8px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:16px}
+.kpi{border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:#fff}
+.kpi .k{font-size:11.5px;color:var(--mute)}
+.kpi .v{font-family:Sora,Inter,sans-serif;font-size:17px;font-weight:700;color:var(--ink);margin-top:2px;white-space:nowrap}
+.kpi.hl{background:var(--new-bg);border-color:var(--new-bd)}
+.kpi.hl .v{color:var(--new-tx)}
+.ctl input[type=number]{width:100%;height:38px;border:0;font-size:14px;font-weight:500;font-family:inherit;color:var(--ink);background:transparent}
+.ctl input[type=number]:focus{outline:none}
+.ctl .unit{font-size:12.5px;color:var(--mute);margin-left:6px;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="hero"><div class="hero-in"><div>
+  <div class="kicker">COMPETITOR ANALYSIS · UPGRAD GROWTH · PARTNER UNIVERSITY SITES</div>
+  <h1>Influencer Affiliate Programme: Competitor Analysis</h1>
+  <p>How other online universities and edtechs in India pay people to bring in students, what they pay, where they fall short, and what we should build for JGU Online, our first partner. Read section 0 for the answer, then section 7 for the plan.</p>
+  <div class="meta">
+    <span><b>Owner</b>: Abhinav Thakur (PM)</span>
+    <span><b>First partner</b>: JGU Online</span>
+    <span><b>Research date</b>: 29 Oct 2026</span>
+  </div>
+  </div>
+  <div class="hero-status">
+    <div class="hs-row"><span>Status</span><span class="hs-pill">Draft</span></div>
+    <div class="hs-row"><span>Last updated</span><b>29 Oct 2026</b></div>
+    <div class="hs-row"><span>Competitors reviewed</span><b>7 across 5 models</b></div>
+    <div class="hs-row"><span>Next step</span><b>Confirm terms with JGU (8)</b></div>
+  </div>
+</div></div>
+<div class="shell">
+  <aside class="toc"><div id="toc-card"></div></aside>
+  <main class="main" id="main">
+
+<section id="overview">
+  <h2><span class="num">0.</span>Summary</h2>
+  <div class="tldr">
+    <h4>At a glance</h4>
+    <dl>
+      <dt>Question</dt><dd>How are others paying people to promote online degrees, and what should our influencer affiliate programme for JGU Online look like?</dd>
+      <dt>Answer</dt><dd>Everyone runs one of five models (1). None of them runs a creator-first, performance-paid programme for one university with matched creators and approved claims. That is the gap (6).</dd>
+      <dt>Payout range</dt><dd>From about ₹5,000 per enrolment (alumni referral) to up to 30% of the programme fee (channel partners). Most figures are self-reported or come from third parties (4).</dd>
+      <dt>Biggest risk</dt><dd>Regulation. UGC bans franchise arrangements for online degrees, and education is ASCI's most non-compliant ad category (5).</dd>
+      <dt>Recommendation</dt><dd>A three-track programme: commission for small creators, a fixed fee plus commission for top creators, and a JGU alumni track. All under one approved-claims sheet and one tracking stack (7).</dd>
+      <dt>How to read</dt><dd>Sections 1 to 3 describe the market. Section 4 covers money, 5 the rules, 6 the gaps, 7 the plan. Section 8 lists what we still need to confirm.</dd>
+    </dl>
+  </div>
+  <h3><span class="num">0.1</span>Why this matters</h3>
+  <p>JGU Online offers about 35 online programmes, led by a 12-month MBA (7 specialisations) and a 3-year BBA. Its site has Apply Now buttons, brochure downloads, WhatsApp and a phone line. It has <b>no referral or affiliate programme</b>, and its links carry no tracking tags. Creators who talk about careers, finance and higher studies already influence degree choices. Today nobody tracks that influence or pays for it.</p>
+  <h3><span class="num">0.2</span>How sure we are</h3>
+  <p>Most competitors don't publish their terms. Every figure on this page carries a tag showing where it came from:</p>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:26%"><col style="width:74%"></colgroup>
+    <tr><th>Tag</th><th>Meaning</th></tr>
+    <tr><td><span class="tag off">Official</span></td><td>Stated on the company's own website.</td></tr>
+    <tr><td><span class="tag tp">Third-party</span></td><td>From an affiliate network, aggregator, news report or blog. Likely right, but may be out of date.</td></tr>
+    <tr><td><span class="tag uv">Unverified</span></td><td>A claim in a press release or a single weak source. Don't quote it without checking.</td></tr>
+    <tr><td><span class="tag us">Our baseline</span></td><td>upGrad's own existing programmes. Shown for comparison, not as a competitor.</td></tr>
+  </table></div>
+</section>
+
+<section id="models">
+  <h2><span class="num">1.</span>The five models in the market</h2>
+  <p>Every programme we found fits one of these five models. They differ in who promotes, what triggers payment, and who takes the risk if nobody enrols.</p>
+  <div class="models">
+    <div class="model m1"><div class="mk">Model A</div><h4>Refer and earn</h4><p>Students and alumni share a link with friends.</p><div class="pay">₹5k–₹80k per enrolment</div></div>
+    <div class="model m2"><div class="mk">Model B</div><h4>Affiliate networks</h4><p>Anyone with a link, signed up through a network such as vCommission.</p><div class="pay">~7–10% per sale</div></div>
+    <div class="model m3"><div class="mk">Model C</div><h4>Channel partners</h4><p>Businesses and counsellors resell programmes.</p><div class="pay">Up to 30% of fee</div></div>
+    <div class="model m4"><div class="mk">Model D</div><h4>Lead-gen portals</h4><p>College search sites sell leads to universities.</p><div class="pay">Per lead + per admission</div></div>
+    <div class="model m5"><div class="mk">Model E</div><h4>Sponsored content</h4><p>The brand pays a creator a flat fee per post.</p><div class="pay">₹50k–₹3L per video</div></div>
+  </div>
+  <h3><span class="num">1.1</span>Who carries the risk</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>
+    <tr><th>Model</th><th>Paid when</th><th>Risk sits with</th><th>Fit for influencers</th></tr>
+    <tr><td>A. Refer and earn</td><td>Friend enrols and stays</td><td>Referrer</td><td><span class="p">Partial.</span> Rewards are too small for creators.</td></tr>
+    <tr><td>B. Affiliate networks</td><td>Sale confirmed after refund window</td><td>Affiliate</td><td><span class="p">Partial.</span> Generic, no creator support.</td></tr>
+    <tr><td>C. Channel partners</td><td>Enrolment</td><td>Partner</td><td><span class="n">Poor.</span> Built for counsellors and agents, and close to franchising (5.1).</td></tr>
+    <tr><td>D. Lead-gen portals</td><td>Lead delivered or admission</td><td>University</td><td><span class="n">No.</span> Driven by SEO, not people.</td></tr>
+    <tr><td>E. Sponsored content</td><td>Post goes live</td><td>Brand</td><td><span class="y">Yes</span>, but you pay even if nobody enrols.</td></tr>
+  </table></div>
+</section>
+
+<section id="profiles">
+  <h2><span class="num">2.</span>Competitor profiles</h2>
+  <p>One card per competitor. Each card ends with the takeaway for our programme.</p>
+
+  <h3><span class="num">2.1</span>Amity Online</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Amity Online · Refer &amp; Earn</b><span class="whh">Model A</span><span class="tag off">Official page</span><span class="tag tp">Amounts third-party</span></div>
+    <div class="facts"><dl>
+      <dt>Who can refer</dt><dd>Existing learners and alumni</dd>
+      <dt>Reward</dt><dd>Up to ₹5,000 per successful referral, sometimes paid as an Amazon voucher. Extra rewards at 2, 3 and 10 referrals.</dd>
+      <dt>Trigger</dt><dd>Friend enrols</dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Works well</h5><ul><li>Tiers reward repeat referrers</li><li>Vouchers are simple to pay out</li></ul></div>
+      <div><h5>Falls short</h5><ul><li>Reward too small to interest creators</li><li>Only learners can join</li></ul></div>
+    </div>
+    <div class="take"><b>Takeaway:</b> Tiers work. Copy them for our alumni track, but creators need far more per enrolment.</div>
+  </div>
+
+  <h3><span class="num">2.2</span>LPU Online</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>LPU Online · Refer &amp; Earn</b><span class="whh">Model A</span><span class="tag off">Official</span></div>
+    <div class="facts"><dl>
+      <dt>Who can refer</dt><dd>Its network of learners</dd>
+      <dt>Reward</dt><dd>Not published</dd>
+      <dt>Tools</dt><dd>A unique referral link and a page to track earnings</dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Works well</h5><ul><li>Self-serve link and earnings tracking</li></ul></div>
+      <div><h5>Falls short</h5><ul><li>No visible reward, so little reason to share</li><li>No creator programme</li></ul></div>
+    </div>
+    <div class="take"><b>Takeaway:</b> An earnings dashboard is now standard. Creators will expect to see their clicks, leads and enrolments themselves.</div>
+  </div>
+
+  <h3><span class="num">2.3</span>upGrad (our baseline)</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>upGrad · three existing tracks</b><span class="whh">Models A, B, C</span><span class="tag us">Our baseline</span></div>
+    <div class="wrap"><table class="fixed"><colgroup><col style="width:22%"><col style="width:48%"><col style="width:30%"></colgroup>
+      <tr><th>Track</th><th>Terms</th><th>Source</th></tr>
+      <tr><td>Refer and earn</td><td>Up to ₹80,000 per friend who enrols, plus a fee waiver for the friend</td><td><span class="tag off">Official</span></td></tr>
+      <tr><td>Channel partner</td><td>Up to 30% of programme value</td><td><span class="tag off">Official</span></td></tr>
+      <tr><td>Affiliate networks</td><td>Listed on vCommission, EarnKaro and FlexOffers. Rates vary by source: 7%, 10%, or "up to $1,500" per enrolment. Pays only after the student starts, stays enrolled and pays full fees.</td><td><span class="tag tp">Third-party</span></td></tr>
+    </table></div>
+    <div class="take"><b>Takeaway:</b> We already have payout rails, eligibility rules and network presence. The influencer programme should reuse them (and the referral system in the Refer and Earn PRD) rather than build new ones. We also need to check that a network affiliate and our creator can't both claim credit for the same JGU student (8).</div>
+  </div>
+
+  <h3><span class="num">2.4</span>Online Vidya / College Siksha</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Online Vidya / College Siksha · partner network</b><span class="whh">Model C</span><span class="tag uv">Press release</span></div>
+    <div class="facts"><dl>
+      <dt>Scale claimed</dt><dd>50+ university tie-ups</dd>
+      <dt>Offer</dt><dd>Franchise model for edtech startups, with access to its CRM and admission workflows. Claims up to 80% commission sharing.</dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Works well</h5><ul><li>Gives partners tools (CRM, workflows), not just a link</li><li>Very high headline share</li></ul></div>
+      <div><h5>Falls short</h5><ul><li>Uses the word "franchise", which UGC has banned for online degrees (5.1)</li><li>Claims can't be verified</li></ul></div>
+    </div>
+    <div class="take"><b>Takeaway:</b> Partners will hear "80%" pitches. We compete on trust, clean compliance and payouts that actually arrive, not on headline share.</div>
+  </div>
+
+  <h3><span class="num">2.5</span>Collegedunia and Shiksha</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Collegedunia · Shiksha</b><span class="whh">Model D</span><span class="tag tp">Third-party</span></div>
+    <div class="facts"><dl>
+      <dt>Revenue</dt><dd>Cost per lead charged to colleges, commission on admissions, premium listings, banner ads (CPM, CPC or fixed packages), counselling.</dd>
+      <dt>Demand source</dt><dd>SEO, rankings and comparison content</dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Works well</h5><ul><li>Huge organic reach</li><li>Universities already budget for paying per lead</li></ul></div>
+      <div><h5>Falls short</h5><ul><li>Leads are shared across many universities, so intent is low</li><li>No personal voice or trust</li></ul></div>
+    </div>
+    <div class="take"><b>Takeaway:</b> These portals set the price universities expect to pay per lead. Our pitch to JGU is better leads for one university, arriving already warmed up by a trusted creator.</div>
+  </div>
+
+  <h3><span class="num">2.6</span>Brand-paid sponsored content</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Universities and edtechs buying creator posts</b><span class="whh">Model E</span><span class="tag tp">Rate guides</span></div>
+    <div class="facts"><dl>
+      <dt>Price</dt><dd>About ₹50,000–₹3,00,000 per sponsored video from a mid-tier Indian YouTuber</dd>
+      <dt>Benchmarks</dt><dd>One agency guide cites 45%+ retention and 1.5%+ click-through on description links <span class="tag uv">Unverified</span></dd>
+      <dt>Visibility</dt><dd>We found no public creator-affiliate programme from any online university. Deals appear to be one-off sponsorships.</dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Works well</h5><ul><li>Creators know this deal and accept it easily</li><li>Gets content live fast</li></ul></div>
+      <div><h5>Falls short</h5><ul><li>Pays even if nobody enrols</li><li>No tracking from a post to an enrolment</li></ul></div>
+    </div>
+    <div class="take"><b>Takeaway:</b> Top creators will still ask for a fixed fee. Offer a smaller fixed fee plus commission so we share the risk instead of carrying all of it.</div>
+  </div>
+
+  <h3><span class="num">2.7</span>Not yet researched</h3>
+  <p>We found no public referral or affiliate terms for <b>Online Manipal</b>, <b>NMIMS CDOE</b> or <b>Jain Online</b>. Next step: ask each counselling team directly, or sign up as a referrer, and record the terms here.</p>
+</section>
+
+<section id="matrix">
+  <h2><span class="num">3.</span>Side-by-side comparison</h2>
+  <p><span class="y">✓</span> yes · <span class="p">~</span> partly · <span class="n">✗</span> no · blank means unknown. The last row is the programme we propose (7).</p>
+  <div class="wrap"><table class="cmp sec-table">
+    <tr><th>Programme</th><th>Open to creators</th><th>Pays on enrolment</th><th>Earnings dashboard</th><th>Tiered rewards</th><th>Matched to programme</th><th>Approved claims</th></tr>
+    <tr><td>Amity Online</td><td class="n">✗</td><td class="y">✓</td><td></td><td class="y">✓</td><td class="n">✗</td><td></td></tr>
+    <tr><td>LPU Online</td><td class="n">✗</td><td class="y">✓</td><td class="y">✓</td><td></td><td class="n">✗</td><td></td></tr>
+    <tr><td>upGrad (all tracks)</td><td class="p">~</td><td class="y">✓</td><td class="p">~</td><td></td><td class="n">✗</td><td></td></tr>
+    <tr><td>Online Vidya</td><td class="n">✗</td><td class="y">✓</td><td class="y">✓</td><td></td><td class="n">✗</td><td></td></tr>
+    <tr><td>Collegedunia / Shiksha</td><td class="n">✗</td><td class="p">~</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td></td></tr>
+    <tr><td>Sponsored content</td><td class="y">✓</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="p">~</td><td class="p">~</td></tr>
+    <tr class="us"><td>Proposed: JGU influencer programme</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+  </table></div>
+  <div class="callout info"><div class="ttl">How to read this</div>Only sponsored content is built for creators, and it is the only model that pays nobody on enrolment. Every model that pays on enrolment is built for students, agents or portals. Section 6 explains why that leaves an opening.</div>
+</section>
+
+<section id="payouts">
+  <h2><span class="num">4.</span>Payout benchmarks</h2>
+  <h3><span class="num">4.1</span>What others pay</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:30%"><col style="width:40%"><col style="width:30%"></colgroup>
+    <tr><th>Programme</th><th>Payout</th><th>Source</th></tr>
+    <tr><td>Amity Online referral</td><td>Up to ₹5,000 per enrolment</td><td><span class="tag tp">Third-party</span></td></tr>
+    <tr><td>upGrad refer and earn</td><td>Up to ₹80,000 per enrolment</td><td><span class="tag us">Official</span></td></tr>
+    <tr><td>upGrad affiliate networks</td><td>7–10% per sale, or up to $1,500</td><td><span class="tag tp">Third-party</span></td></tr>
+    <tr><td>upGrad channel partner</td><td>Up to 30% of programme value</td><td><span class="tag us">Official</span></td></tr>
+    <tr><td>Online Vidya partners</td><td>Up to 80% commission share</td><td><span class="tag uv">Unverified</span></td></tr>
+    <tr><td>Sponsored video, mid-tier</td><td>₹50,000–₹3,00,000 flat</td><td><span class="tag tp">Third-party</span></td></tr>
+  </table></div>
+  <div class="callout warn"><div class="ttl">Sources disagree</div>upGrad's affiliate rate is listed as 7%, 10% and "up to $1,500" on three different sites. Treat every number in this table as a range to test, not a fact to quote.</div>
+
+  <h3><span class="num">4.2</span>Economics calculator</h3>
+  <p>Shows what one creator earns, and what we keep, under commission-only pay. The programme fee and JGU's commission to us are <b>example values</b> until JGU confirms them (8).</p>
+  <div id="calc-root"></div>
+</section>
+
+<section id="rules">
+  <h2><span class="num">5.</span>Rules that shape every model</h2>
+  <h3><span class="num">5.1</span>UGC: no franchising</h3>
+  <ul>
+    <li>UGC regulations say recognised institutions <b>shall not offer online or distance programmes under any franchise arrangement</b>. The institution keeps full responsibility.</li>
+    <li>In December 2022, UGC and AICTE asked institutions to end franchise arrangements with edtech companies. They specifically mentioned edtechs advertising degrees in newspapers, on social media and on TV.</li>
+    <li>A December 2023 notice warned against unapproved edtech tie-ups with foreign universities.</li>
+    <li>A legal commentary on these notices says ads must not imply recognition or accreditation that can't be proven.</li>
+  </ul>
+  <h3><span class="num">5.2</span>ASCI and CCPA: honest ads, clear disclosure</h3>
+  <ul>
+    <li>ASCI says education stayed the <b>most non-compliant ad category</b> in 2025, with 71 education ads flagged in the first half of FY26.</li>
+    <li>98% of influencer ads ASCI reviewed needed changes, and 76% of India's top influencers broke disclosure rules.</li>
+    <li>Common breaches: "No. 1" and "most respected" claims with no third-party data, and promises of results.</li>
+    <li>CCPA fined Byju's ₹10 lakh in 2023 for misleading ads and issued guidelines on coaching ads in 2024.</li>
+  </ul>
+  <h3><span class="num">5.3</span>What this means for us</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:35%"><col style="width:65%"></colgroup>
+    <tr><th>Rule</th><th>How the programme handles it</th></tr>
+    <tr><td>No franchising</td><td>JGU owns admissions, fees and the student relationship. We and our creators market only. The word "franchise" never appears in any contract or page.</td></tr>
+    <tr><td>No unproven claims</td><td>One approved-claims sheet, signed off by JGU. JGU's site says "Institution of Eminence" and "India's #1 Private University". Creators use only that exact wording, with the source cited.</td></tr>
+    <tr><td>Accreditation</td><td>Nobody says "UGC approved" until JGU confirms it in writing (8).</td></tr>
+    <tr><td>Disclosure</td><td>Every post carries #ad or a paid-partnership label. We check each post before paying for it.</td></tr>
+    <tr><td>No guarantees</td><td>No job, salary or "last few seats" claims. The creator brief bans them.</td></tr>
+  </table></div>
+</section>
+
+<section id="gaps">
+  <h2><span class="num">6.</span>Gaps we can own</h2>
+  <p>Each gap is something no competitor in section 2 does today.</p>
+  <div class="gapgrid">
+    <div class="gapc"><div class="gn">1</div><h4>Performance pay built for creators</h4><p>Referral rewards are too small and flat fees carry no risk for the creator. Nobody offers creators a fixed fee plus a meaningful commission per enrolment.</p><div class="who">Beats: sponsored content, refer and earn</div></div>
+    <div class="gapc"><div class="gn">2</div><h4>Creators matched to programmes</h4><p>Everyone promotes "an online MBA". JGU has niche degrees (public policy, ACCA, AI &amp; data science, TESOL) whose audiences already follow specific creators.</p><div class="who">Beats: portals, affiliate networks</div></div>
+    <div class="gapc"><div class="gn">3</div><h4>Compliance as the selling point</h4><p>With education the top ASCI violator, a university will pick the partner that guarantees approved claims, disclosure and review before content goes live.</p><div class="who">Beats: Online Vidya, unmanaged affiliates</div></div>
+    <div class="gapc"><div class="gn">4</div><h4>Proof from post to enrolment</h4><p>Sponsored deals can't show which video led to which enrolment. Tracked links, promo codes and CRM status updates can, both for the creator and for JGU.</p><div class="who">Beats: sponsored content, portals</div></div>
+    <div class="gapc"><div class="gn">5</div><h4>Alumni as creators</h4><p>Referral programmes treat alumni as one-off referrers. JGU alumni with a LinkedIn audience are the most trusted voices, and the cheapest to pay.</p><div class="who">Beats: Amity, LPU refer and earn</div></div>
+  </div>
+</section>
+
+<section id="plan">
+  <h2><span class="num">7.</span>Recommendation</h2>
+  <h3><span class="num">7.1</span>Positioning</h3>
+  <p><b>Every enrolment traced to the creator who earned it, and every claim approved by JGU.</b> We sell JGU better leads and lower risk. We offer creators clear tracking, payouts that arrive on time, and content support.</p>
+  <h3><span class="num">7.2</span>Three tracks</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:20%"><col style="width:28%"><col style="width:30%"><col style="width:22%"></colgroup>
+    <tr><th>Track</th><th>Who</th><th>Pay</th><th>Borrowed from</th></tr>
+    <tr><td>Creator</td><td>10k–150k followers in career, finance, tech, policy or teaching niches</td><td>Commission per enrolment, with higher rates at 5 and 10 enrolments a quarter</td><td>Affiliate networks, Amity tiers</td></tr>
+    <tr><td>Creator Pro</td><td>Top creators who ask for a fixed fee</td><td>A smaller fixed fee per video plus commission</td><td>Sponsored content</td></tr>
+    <tr><td>Alumni</td><td>JGU Online graduates and current students</td><td>Gift card tiers through the existing Refer and Earn system</td><td>upGrad and Amity refer and earn</td></tr>
+  </table></div>
+  <h3><span class="num">7.3</span>Starting terms to test</h3>
+  <ul>
+    <li><b>Ask JGU</b> for 15–25% of first-year fees per paid enrolment. That is below channel-partner rates and above affiliate-network rates (4.1).</li>
+    <li><b>Pay creators</b> 40–60% of that. Our share covers counselling, tooling and refunds.</li>
+    <li><b>Pay after the refund window closes</b>, like upGrad's affiliate rules. Credit lasts 30–90 days after the click.</li>
+    <li><b>Run the numbers</b> in the calculator (4.2) once JGU's fee and commission are confirmed.</li>
+  </ul>
+  <h3><span class="num">7.4</span>90-day pilot</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:20%"><col style="width:80%"></colgroup>
+    <tr><th>Weeks</th><th>Work</th></tr>
+    <tr><td>1–3</td><td>Agreement with JGU, approved-claims sheet, tracked links and landing pages, creator brief. Recruit 15–20 creators across MBA, BBA, AI &amp; Data Science and Public Policy.</td></tr>
+    <tr><td>4–10</td><td>Content goes live. One faculty webinar per programme. Weekly review of clicks, leads, applications and enrolments.</td></tr>
+    <tr><td>11–13</td><td>Compare cost per enrolment with paid channels. Drop the weaker half of creators, double down on the strongest, and pitch the results to the next partner university.</td></tr>
+  </table></div>
+</section>
+
+<section id="open">
+  <h2><span class="num">8.</span>Open questions</h2>
+  <ol class="oq-list">
+    <li><b>JGU commission.</b> What does JGU pay per enrolment, by programme, and what are its first-year fees?</li>
+    <li><b>Sub-affiliates.</b> Does the JGU agreement let us pay outside creators to promote under JGU's brand?</li>
+    <li><b>Accreditation wording.</b> Which approvals can creators name, word for word (UGC entitlement, NAAC grade, AACSB)?</li>
+    <li><b>Double credit.</b> Do upGrad's affiliate-network partners already promote JGU programmes? If they do, which channel gets credit when both send the same student?</li>
+    <li><b>Lead status from the CRM.</b> Can the CRM send each lead's status (application, payment, refund) back to the tracking platform?</li>
+    <li><b>Competitor gaps.</b> Collect the referral terms for Online Manipal, NMIMS CDOE and Jain Online (2.7).</li>
+  </ol>
+</section>
+
+<section id="sources">
+  <h2><span class="num">A.</span>Appendix: sources</h2>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:34%"><col style="width:66%"></colgroup>
+    <tr><th>Topic</th><th>Link</th></tr>
+    <tr><td>JGU Online programmes</td><td><a href="https://programs.jguonline.edu.in" target="_blank" rel="noopener">programs.jguonline.edu.in</a></td></tr>
+    <tr><td>Amity Online referral</td><td><a href="https://amityonline.com/referral" target="_blank" rel="noopener">amityonline.com/referral</a> · <a href="https://www.referkaroearnkaro.com/store/amity-university-refer-and-earn" target="_blank" rel="noopener">referkaroearnkaro.com</a></td></tr>
+    <tr><td>LPU Online referral</td><td><a href="https://www.lpuonline.com/referral" target="_blank" rel="noopener">lpuonline.com/referral</a></td></tr>
+    <tr><td>upGrad refer and earn</td><td><a href="https://www.upgrad.com/refer-and-earn" target="_blank" rel="noopener">upgrad.com/refer-and-earn</a></td></tr>
+    <tr><td>upGrad partner programme</td><td><a href="https://e.upgrad.com/franchise-page" target="_blank" rel="noopener">e.upgrad.com/franchise-page</a></td></tr>
+    <tr><td>upGrad affiliate listings</td><td><a href="https://uppromote.com/affiliate-program-directory/upgrad/" target="_blank" rel="noopener">UpPromote</a> · <a href="https://earnkaro.com/blog/upgrad-affiliate-program/" target="_blank" rel="noopener">EarnKaro</a> · <a href="https://www.vcommission.com/blog/affiliate-marketing/earn-from-your-education-content-with-the-upgrad-affiliate-program/" target="_blank" rel="noopener">vCommission</a> · <a href="https://www.flexoffers.com/affiliate-programs/upgrad-affiliate-program/" target="_blank" rel="noopener">FlexOffers</a></td></tr>
+    <tr><td>Online Vidya / College Siksha</td><td><a href="https://www.lokmattimes.com/business/online-vidya-scales-up-with-50-university-partnerships-offers-70-student-scholarships-lucrative-franchise-model/amp" target="_blank" rel="noopener">Lokmat Times press release</a></td></tr>
+    <tr><td>Collegedunia and Shiksha models</td><td><a href="https://vizologi.com/business-strategy-canvas/collegedunia-business-model-canvas/" target="_blank" rel="noopener">Vizologi</a> · <a href="https://app.dealroom.co/companies/collegedunia" target="_blank" rel="noopener">Dealroom</a> · <a href="https://startuptalky.com/collegedunia-startup-story/" target="_blank" rel="noopener">StartupTalky</a></td></tr>
+    <tr><td>Creator rates</td><td><a href="https://topinfluencersindia.com/influencer-marketing-rates-india-2025/" target="_blank" rel="noopener">Influencer marketing rates India 2025</a> · <a href="https://qoruz.com/blog/how-to-choose-youtube-influencers-for-brand-campaigns-in-2025/" target="_blank" rel="noopener">Qoruz</a></td></tr>
+    <tr><td>UGC and AICTE notices</td><td><a href="https://news.careers360.com/ugc-warns-of-action-against-institutions-offer-online-programmes-in-ties-edtech-firms" target="_blank" rel="noopener">Careers360</a> · <a href="https://nishithdesai.com/research-and-articles/hotline/education-sector-hotline/decoding-the-ugc-and-aictes-notices-on-franchising-and-mis-advertising-for-online-degree-programmes-5190" target="_blank" rel="noopener">Nishith Desai Associates</a> · <a href="https://www.tribuneindia.com/news/jobscareers/ugc-aicte-warn-against-franchise-arrangement-between-colleges-ed-tech-companies-362042/amp" target="_blank" rel="noopener">Tribune</a> · <a href="https://business-standard.com/amp/education/news/ugc-warns-edtech-cos-offering-degrees-in-association-with-foreign-varsities-123121600236_1.html" target="_blank" rel="noopener">Business Standard</a></td></tr>
+    <tr><td>ASCI and CCPA</td><td><a href="https://www.storyboard18.com/advertising/illegal-betting-tops-ad-violations-in-h1-fy26-76-of-top-influencers-breach-norms-asci-83991.htm" target="_blank" rel="noopener">Storyboard18, H1 FY26</a> · <a href="https://news.careers360.com/educational-institutes-edtech-companies-biggest-violators-of-advertising-code-asci-ads-healthcare-coaching-centres/amp" target="_blank" rel="noopener">Careers360</a> · <a href="https://www.storyboard18.com/how-it-works/how-misleading-coaching-ads-are-eroding-trust-in-indias-education-sector-87793.htm" target="_blank" rel="noopener">Storyboard18, coaching ads</a></td></tr>
+    <tr><td>Related spec</td><td><a href="https://abhinavthak.github.io/refer-and-earn-prd/" target="_blank" rel="noopener">Refer and Earn PRD</a></td></tr>
+  </table></div>
+</section>
+
+<section id="changelog">
+  <h2><span class="num">B.</span>Appendix: change log</h2>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:22%"><col style="width:78%"></colgroup>
+    <tr><th>Date</th><th>Change</th></tr>
+    <tr><td>29 Oct 2026</td><td>First draft: five models, seven competitors, payout benchmarks, rules, gaps, recommendation and calculator.</td></tr>
+  </table></div>
+</section>
+
+  </main>
+</div>
+<script>
+// ---- Economics calculator (4.2) ----
+(function(){
+  const DEFAULTS = { fee:200000, uni:20, share:50, clicks:2000, c2l:4, l2e:4, refund:10, flat:150000 };
+  const PRESETS = {
+    micro:  { label:'Micro creator', clicks:1500, c2l:5, l2e:4 },
+    mid:    { label:'Mid-tier creator', clicks:6000, c2l:3, l2e:3 },
+    alumni: { label:'Alumni referrer', clicks:60, c2l:30, l2e:15 }
+  };
+  const FIELDS = [
+    ['fee','Programme fee, first year (example)','₹',10000],
+    ['uni','JGU pays us (example)','% of fee',1],
+    ['share','Creator gets','% of our commission',5],
+    ['clicks','Link clicks per month','clicks',100],
+    ['c2l','Click to lead','%',0.5],
+    ['l2e','Lead to paid enrolment','%',0.5],
+    ['refund','Refunds before payout','%',1],
+    ['flat','Fixed fee for one sponsored video','₹',10000]
+  ];
+  let s = Object.assign({}, DEFAULTS, PRESETS.micro), active = 'micro';
+  const inr = n => '₹' + Math.round(n).toLocaleString('en-IN');
+  const one = n => (Math.round(n*10)/10).toLocaleString('en-IN');
+  function render(){
+    const root = document.getElementById('calc-root'); if (!root) return;
+    const leads = s.clicks * s.c2l / 100;
+    const enr = leads * s.l2e / 100 * (1 - s.refund/100);
+    const perEnr = s.fee * s.uni / 100;
+    const toCreator = perEnr * s.share / 100;
+    const creatorMonth = enr * toCreator;
+    const usMonth = enr * (perEnr - toCreator);
+    const breakeven = perEnr > 0 ? s.flat / perEnr : 0;
+    const btns = Object.keys(PRESETS).map(k => '<button data-p="'+k+'" class="'+(k===active?'on':'')+'">'+PRESETS[k].label+'</button>').join('');
+    const ctl = FIELDS.map(([k,l,u,st]) => '<div class="ctl"><label>'+l+'</label><div class="field"><input type="number" min="0" step="'+st+'" data-k="'+k+'" value="'+s[k]+'"><span class="unit">'+u+'</span></div></div>').join('');
+    let note = 'At this rate a creator earns ' + inr(toCreator) + ' per enrolment. ';
+    note += 'A ' + inr(s.flat) + ' sponsored video pays for itself only if it brings ' + one(breakeven) + ' paid enrolment' + (breakeven===1?'':'s') + '. ';
+    note += enr >= breakeven ? 'This creator clears that in a month, so commission costs them nothing.' : 'This creator brings fewer than that in a month, so a flat fee would cost us more than commission.';
+    root.innerHTML = '<div class="calc">'+
+      '<div class="calc-head"><div><h4>Commission-only economics, per creator per month</h4><p>Pick a creator type, then change any value.</p></div><div class="presets">'+btns+'</div></div>'+
+      '<div class="controls">'+ctl+'</div>'+
+      '<div class="kpis">'+
+        '<div class="kpi"><div class="k">Leads</div><div class="v">'+one(leads)+'</div></div>'+
+        '<div class="kpi"><div class="k">Paid enrolments</div><div class="v">'+one(enr)+'</div></div>'+
+        '<div class="kpi"><div class="k">Our commission per enrolment</div><div class="v">'+inr(perEnr)+'</div></div>'+
+        '<div class="kpi hl"><div class="k">Creator earns</div><div class="v">'+inr(creatorMonth)+'</div></div>'+
+        '<div class="kpi hl"><div class="k">We keep</div><div class="v">'+inr(usMonth)+'</div></div>'+
+      '</div>'+
+      '<div class="calc-result">'+note+'</div>'+
+      '<div class="calc-note">Conversion rates are planning assumptions, not measured data. Replace them with pilot results after week 10 (7.4).</div>'+
+    '</div>';
+    root.querySelectorAll('[data-k]').forEach(el => el.addEventListener('change', () => {
+      const v = Number(el.value); s[el.dataset.k] = isFinite(v) && v >= 0 ? v : 0;
+      if (['clicks','c2l','l2e'].includes(el.dataset.k)) active = null;
+      setTimeout(render, 0);
+    }));
+    root.querySelectorAll('[data-p]').forEach(b => b.addEventListener('click', () => {
+      active = b.dataset.p; const p = PRESETS[active];
+      s.clicks = p.clicks; s.c2l = p.c2l; s.l2e = p.l2e; setTimeout(render, 0);
+    }));
+  }
+  render();
+})();
+</script>
+<script>
+// ---- Heading ids, table of contents, section links ----
+(function(){
+  const slug = n => 'sec-' + n.replace(/\.$/,'').replace(/\./g,'-');
+  const ids = {};
+  document.querySelectorAll('section').forEach(sec => {
+    sec.querySelectorAll('h2 .num, h3 .num').forEach(num => {
+      const n = num.textContent.trim().replace(/\.$/,'');
+      const h = num.parentElement;
+      if (h.tagName === 'H2') { ids[n] = sec.id; }
+      else { h.id = h.id || slug(n); ids[n] = h.id; }
+    });
+  });
+  // TOC
+  const toc = document.getElementById('toc-card');
+  let html = '<div class="toc-h">On this page</div>';
+  document.querySelectorAll('section').forEach(sec => {
+    const h2 = sec.querySelector('h2'); if (!h2) return;
+    const clone = h2.cloneNode(true);
+    clone.querySelectorAll('.tag').forEach(t => t.remove());
+    const num = clone.querySelector('.num');
+    const idx = num ? num.textContent.replace('.', '') : '';
+    const label = clone.textContent.replace(/^[0-9A-Z]+\.\s*/, '').trim();
+    let sub = '';
+    sec.querySelectorAll('h3').forEach(h3 => {
+      const c = h3.cloneNode(true); c.querySelectorAll('.tag').forEach(t => t.remove());
+      const n = c.querySelector('.num'); const nt = n ? n.textContent : '';
+      if (n) n.remove();
+      sub += '<a href="#' + h3.id + '" data-t="' + h3.id + '"><span class="idx">' + nt + '</span><span class="lbl">' + c.textContent.trim() + '</span></a>';
+    });
+    html += '<div class="grp" data-sec="' + sec.id + '"><a href="#' + sec.id + '" data-t="' + sec.id + '"><span class="idx">' + idx + '</span><span class="lbl">' + label + '</span></a>' + (sub ? '<div class="sub">' + sub + '</div>' : '') + '</div>';
+  });
+  toc.innerHTML = html;
+  // Scroll spy
+  const heads = Array.from(document.querySelectorAll('section > h2, section h3')).filter(h => h.closest('section'));
+  let ticking = false;
+  function spy(){
+    ticking = false;
+    let cur = heads[0];
+    for (const h of heads) { if (h.getBoundingClientRect().top < 140) cur = h; else break; }
+    if (!cur) return;
+    const sec = cur.closest('section');
+    toc.querySelectorAll('.grp').forEach(g => g.classList.toggle('open', g.dataset.sec === sec.id));
+    toc.querySelectorAll('a').forEach(a => a.classList.remove('on'));
+    const top = toc.querySelector('.grp[data-sec="' + sec.id + '"] > a'); if (top) top.classList.add('on');
+    if (cur.tagName === 'H3') { const s2 = toc.querySelector('.sub a[data-t="' + cur.id + '"]'); if (s2) s2.classList.add('on'); }
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, {passive:true});
+  spy();
+  // Clickable section references, e.g. (4.1), 3.4, (6)
+  const skip = el => el.closest('script,style,svg,code,a,button,input,select,textarea,#calc-root,.num,h2,h3,.toc');
+  const roots = [document.querySelector('.hero p'), document.getElementById('main')].filter(Boolean);
+  const re = /(\b\d{1,2}\.\d{1,2}\b)(?![\d%])|\((\d{1,2}|[AB])\)/g;
+  roots.forEach(root => {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: n => (!n.parentElement || skip(n.parentElement)) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      const t = node.nodeValue; re.lastIndex = 0; if (!re.test(t)) return; re.lastIndex = 0;
+      const frag = document.createDocumentFragment(); let last = 0, m, any = false;
+      while ((m = re.exec(t))) {
+        const key = m[1] || m[2]; const id = ids[key];
+        const before = t.slice(Math.max(0, m.index - 1), m.index);
+        if (!id || /[₹\d,.]/.test(before)) continue;
+        any = true;
+        const start = m[1] ? m.index : m.index + 1;
+        frag.appendChild(document.createTextNode(t.slice(last, start)));
+        const a = document.createElement('a'); a.className = 'xref'; a.href = '#' + id; a.textContent = key;
+        a.title = 'Go to ' + key;
+        frag.appendChild(a); last = start + key.length;
+      }
+      if (!any) return;
+      frag.appendChild(document.createTextNode(t.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  });
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a.xref'); if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1)); if (!el) return;
+    const h = el.tagName === 'SECTION' ? el.querySelector('h2') : el;
+    h.classList.remove('flash'); void h.offsetWidth; h.classList.add('flash');
+  });
+  // Print: open every collapsible
+  window.addEventListener('beforeprint', () => document.querySelectorAll('details').forEach(d => { d.dataset.wasOpen = d.open ? '1' : ''; d.open = true; }));
+  window.addEventListener('afterprint', () => document.querySelectorAll('details').forEach(d => { d.open = d.dataset.wasOpen === '1'; }));
+})();
+</script>
+</body>
+</html>
