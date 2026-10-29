@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>CU Online Creator Programme</title>
+<meta name="description" content="Influencer affiliate programme for Chandigarh University Online: competitor playbook, share-of-fees payout model, legal checks and pilot plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14213D; --txt:#33394A; --mute:#6B7280; --faint:#9AA1B1;
+  --paper:#FFFFFF; --bg:#F6F7FB; --line:#E4E7EF; --line2:#EDEFF5;
+  --teal:#0E8E88; --indigo:#2E2A83; --accent:#2A4BD7;
+  --info-bg:#EFF5FF; --info-bd:#C7DBFF; --info-tx:#1D4ED8;
+  --ok-bg:#EAF7EE; --ok-bd:#BCE4C7; --ok-tx:#15803D;
+  --warn-bg:#FFF7E6; --warn-bd:#F5DE9E; --warn-tx:#92660C;
+  --new-bg:#F3EEFF; --new-bd:#DACBFB; --new-tx:#5B32C4;
+  --code-bg:#F4F5F9;
+  --r:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Sora,Inter,sans-serif;color:var(--ink);letter-spacing:-0.01em;margin:0}
+code,.mono{font-family:"JetBrains Mono",monospace}
+a{color:var(--accent)}
+.hero{background:linear-gradient(115deg,#14ACA3 0%,#1C6FA8 45%,#2E2A83 100%);padding:64px 48px 46px;color:#fff}
+.hero .kicker{font-size:13px;font-weight:600;letter-spacing:.03em;color:rgba(255,255,255,.78);margin-bottom:10px}
+.hero h1{color:#fff;font-size:32px;font-weight:700;max-width:820px}
+.hero p{color:rgba(255,255,255,.86);max-width:620px;margin:12px 0 0;font-size:15px;line-height:1.6}
+.hero .meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:rgba(255,255,255,.8)}
+.hero .meta b{color:#fff;font-weight:600}
+
+.shell{display:grid;grid-template-columns:252px minmax(0,1fr);max-width:1180px;margin:-28px auto 0;gap:0}
+.toc{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;padding:34px 18px 40px 8px}
+.toc-h{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);padding:0 12px 10px}
+.toc a{display:flex;align-items:baseline;gap:10px;padding:8px 12px;border-radius:8px;color:var(--txt);text-decoration:none;font-size:13px;line-height:1.4;margin-bottom:1px}
+.toc a:hover{background:var(--line2)}
+.toc a .idx{font-size:11px;color:var(--faint);min-width:14px;flex:none;font-variant-numeric:tabular-nums}
+.toc a .lbl{flex:1;min-width:0}
+.toc a .dot{width:6px;height:6px;border-radius:50%;background:var(--warn-tx);flex:none;align-self:center}
+
+.main{padding:34px 40px 90px;min-width:0}
+section{margin-bottom:52px;scroll-margin-top:18px}
+section h2{font-size:22px;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:16px}
+section h2 .num{color:var(--faint);font-weight:500;margin-right:9px}
+h3{font-size:16.5px;margin:26px 0 10px}
+h3 .num{color:var(--faint);font-weight:500;margin-right:6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:5px}
+.lead{font-size:16px;color:var(--txt)}
+
+.callout{border-radius:var(--r);padding:14px 16px;margin:16px 0;border:1px solid;font-size:14.5px;line-height:1.6}
+.callout.info{background:var(--info-bg);border-color:var(--info-bd);color:#1E3A6E}
+.callout.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:#0F5A2A}
+.callout .ttl{font-weight:600;display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.callout.warn{background:var(--warn-bg);border-color:var(--warn-bd);color:#5C3D06}
+.callout.warn .ttl{color:var(--warn-tx)}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 9px;border-radius:20px;line-height:1.7}
+.tag.gap{background:var(--warn-bg);color:var(--warn-tx);border:1px solid var(--warn-bd)}
+.tag.src{background:var(--ok-bg);color:var(--ok-tx);border:1px solid var(--ok-bd)}
+.tag.ex{background:var(--bg2,#f1f1f4);color:#555;border:1px solid #ddd}
+.tag.ph{background:none;border:0;color:#6B62B8;margin-left:7px;padding:0;font-size:9.5px;font-weight:700;letter-spacing:.08em;line-height:1;white-space:nowrap;vertical-align:2px}
+
+table{width:100%;border-collapse:collapse;margin:14px 0 18px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;font-size:14px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line2);vertical-align:top}
+th{background:#FAFBFD;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:700}
+.fixed{table-layout:fixed}
+.fixed th{white-space:normal;line-height:1.4}
+.event-table{table-layout:fixed}
+.event-table td{vertical-align:middle}
+.event-table td code{font-size:11.5px;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td code{font-size:12.5px;background:var(--code-bg);padding:1px 6px;border-radius:5px}
+.center{text-align:center}
+.mini{font-size:12.5px;color:var(--mute)}
+.wrap{overflow-x:auto}
+.sec-table{min-width:720px;font-size:13.5px}
+.sec-table td{padding:12px 12px}
+.cl{margin:0;padding-left:16px}
+.cl li{margin-bottom:3px}
+.wdg{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);margin:14px 0;overflow:hidden}
+.wdg-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;padding:12px 14px;background:#FAFBFD;border-bottom:1px solid var(--line2)}
+.wdg-h b{font-family:Sora,Inter,sans-serif;color:var(--ink);font-size:14.5px}
+.wid{font-size:11px;font-weight:700;color:#fff;background:var(--indigo);border-radius:6px;padding:1px 7px}
+.whh{font-size:10.5px;font-weight:600;color:var(--mute);border:1px solid var(--line);border-radius:20px;padding:0 7px}
+.wj{flex-basis:100%;font-size:13px;color:var(--mute)}
+.wdg table{border:0;border-radius:0;margin:0}
+.wt{min-width:600px;font-size:13.5px}
+.rq{display:inline-block;font-size:11px;font-weight:700;padding:1px 9px;border-radius:20px;white-space:nowrap}
+.rq.r{background:#FDE7E7;color:#B42318}.rq.o{background:var(--line2);color:var(--mute)}.rq.a{background:var(--info-bg);color:var(--info-tx)}
+.cta{display:inline-block;background:var(--ink);color:#fff;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:20px;margin:0 4px 5px 0;line-height:1.4;max-width:100%}
+
+.flows{display:flex;gap:28px;flex-wrap:wrap}
+.flow{display:flex;flex-direction:column;gap:10px;flex:1;min-width:260px;max-width:400px;margin:12px 0 20px}
+.flow-h{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:2px}
+.flow .step{border-radius:9px;padding:12px 16px;color:#fff;position:relative}
+.flow .step b{display:block;font-size:14px;font-weight:600}
+.flow .step span{font-size:12.5px;opacity:.85}
+.flow .step:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-11px;width:1.5px;height:10px;background:var(--faint)}
+.s1{background:#4B5261}.s2{background:#4A3FA0}.s3{background:#4A3FA0}.s4{background:#B0522A}.s5{background:#0E7A63}
+
+.jflow{margin:14px 0 10px}
+.jrow,.jvoid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.jvoid{margin-top:30px}
+.jn,.jv{position:relative;border-radius:9px;padding:10px 11px 12px;font-size:12.5px;line-height:1.45}
+.jn{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--faint)}
+.jn.c1{border-top-color:#4B5261}.jn.c2{border-top-color:#4A3FA0}.jn.c3{border-top-color:#B0522A}.jn.c4{border-top-color:#0E7A63}
+.jn:not(:last-child)::after{content:"";position:absolute;right:-20px;top:50%;width:14px;height:14px;transform:translateY(-50%);background:no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M1 7h11M8 3l4 4-4 4' fill='none' stroke='%239AA1B1' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.jv{background:var(--warn-bg);border:1.5px dashed var(--warn-bd)}
+.jv::before{content:"";position:absolute;left:50%;top:-31px;height:30px;border-left:1.5px dashed var(--warn-tx)}
+.jk{font-size:10.5px;font-weight:700;color:var(--faint);letter-spacing:.04em}
+.jvf{font-size:10.5px;font-weight:700;color:var(--warn-tx);text-transform:uppercase;letter-spacing:.04em}
+.jt{font-family:Sora,Inter,sans-serif;font-weight:600;color:var(--ink);font-size:13px;margin:2px 0 4px}
+.jd{color:var(--mute);margin-bottom:8px}
+.pill{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 9px;border-radius:20px;white-space:nowrap}
+.p-pend{background:var(--line2);color:var(--mute)}
+.p-sched{background:var(--info-bg);color:var(--info-tx)}
+.p-sent{background:var(--ok-bg);color:var(--ok-tx)}
+.p-void{background:#FBE8C8;color:var(--warn-tx)}
+.p-max{background:var(--line2);color:var(--faint)}
+@media(max-width:880px){
+  .jrow,.jvoid{grid-template-columns:1fr;gap:20px}
+  .jvoid{margin-top:20px}
+  .jv{grid-column:auto!important}
+  .jv::before{display:none}
+  .jn:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-18px;transform:translateX(-50%) rotate(90deg)}
+}
+
+.oq-list{border:1px solid var(--warn-bd);background:var(--warn-bg);border-radius:var(--r);padding:6px 18px 6px 36px}
+.oq-list li{margin:10px 0}
+.oq-list b{color:var(--warn-tx)}
+
+/* live simulator */
+.calc{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:20px 22px 24px;margin:18px 0}
+.calc-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.calc-head h4{font-size:15px;margin:0 0 3px}
+.calc-head p{margin:0;font-size:13px;color:var(--mute)}
+.presets{display:flex;gap:8px;flex-wrap:wrap}
+.presets button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 13px;font-size:12.5px;font-weight:500;cursor:pointer;color:var(--txt);font-family:inherit}
+.presets button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.presets button:hover:not(.on){background:var(--line2)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.ctl label{display:block;font-size:12px;font-weight:600;color:var(--mute);margin-bottom:6px}
+.ctl .field{display:flex;align-items:center;height:40px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:0 12px}
+.ctl input[type=range]{width:100%}
+.ctl select{width:100%;height:38px;border:0;padding:0 28px 0 0;font-size:14px;font-weight:500;font-family:inherit;color:var(--ink);cursor:pointer;appearance:none;-webkit-appearance:none;-moz-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 2px center}
+.ctl .field{transition:border-color .15s,box-shadow .15s}
+.ctl .field:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,75,215,.12)}
+.ctl .field:has(select):hover{border-color:var(--faint)}
+.ctl input[type=range]{accent-color:var(--indigo)}
+.ctl select:focus{outline:none}
+.ctl .val{font-weight:700;color:var(--ink);margin-left:10px;min-width:22px;text-align:right}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.cell{border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:12.5px}
+.cell .who{color:var(--mute);font-size:11.5px}
+.cell .amt{font-weight:700;color:var(--ink);font-size:14px;margin-top:2px;white-space:nowrap}
+.cell .tier{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 8px;border-radius:20px;white-space:nowrap}
+.t-Starter{background:#EEF0F4;color:#4B5261}
+.t-Silver{background:#E8EEF8;color:#2F4A7A}
+.t-Gold{background:#FFF3D6;color:#8A5A00}
+.t-void{background:var(--warn-bg);color:var(--warn-tx)}
+.t-cap{background:var(--line2);color:var(--faint)}
+.cell.void{background:#FFFBF2}
+.cell.void .amt{color:var(--faint);text-decoration:line-through}
+.t-c0{background:#EEF0F4;color:#4B5261}.t-c1{background:#E8EEF8;color:#2F4A7A}.t-c2{background:#FFF3D6;color:#8A5A00}.t-c3{background:#EAF7EE;color:#15803D}
+.cset{border:1px solid var(--line);border-radius:10px;background:#FAFBFD;padding:14px 16px}
+.cset-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:10px}
+.cset-h b{font-family:Sora,Inter,sans-serif;color:var(--ink);font-size:14.5px}
+.cset-h button{margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--indigo);cursor:pointer;font-family:inherit}
+.cset-t{width:100%;min-width:460px;border:0;margin:0;background:none;font-size:13px}
+.cset-t th,.cset-t td{padding:5px 6px;border:0;background:none}
+.cset-t th{font-size:11px;text-transform:none;letter-spacing:0;color:var(--mute)}
+.cset-t td:first-child{color:var(--mute);font-size:12px;white-space:nowrap}
+.cset input{width:100%;height:34px;border:1px solid var(--line);border-radius:7px;padding:0 9px;font-size:13.5px;font-family:inherit;color:var(--ink);background:#fff}
+.cset input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(42,75,215,.12)}
+.cset-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px}
+.cset-row label{font-size:11.5px;font-weight:600;color:var(--mute);display:flex;flex-direction:column;gap:5px}
+.cset-ro{display:flex;flex-direction:column;justify-content:flex-end;gap:5px;font-size:11.5px;font-weight:600;color:var(--mute)}
+.cset-ro b{height:34px;display:flex;align-items:center;font-size:15px;color:var(--ink)}
+.cset-err{margin-top:10px;padding:8px 12px;border-radius:8px;background:var(--warn-bg);border:1px solid var(--warn-bd);color:var(--warn-tx);font-size:12.5px}
+.calc-result{margin-top:16px;padding:13px 16px;border-radius:9px;background:var(--bg);font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line)}
+.calc-note{margin-top:10px;font-size:12px;color:var(--mute)}
+
+.tldr{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--indigo);border-radius:var(--r);padding:16px 20px;margin:4px 0 22px}
+.tldr h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--indigo);margin:0 0 10px}
+.tldr dl{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0;font-size:14.5px}
+.tldr dt{font-weight:600;color:var(--ink)}.tldr dd{margin:0}
+@media(max-width:600px){.tldr dl{grid-template-columns:1fr}.tldr dt{margin-top:6px}}
+details.fields{margin:10px 0 16px}
+details.fields>summary{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 16px;border:1px solid var(--line);background:var(--paper);border-radius:20px;font-size:13px;font-weight:600;color:var(--indigo);cursor:pointer;list-style:none}
+details.fields>summary::-webkit-details-marker{display:none}
+details.fields>summary::after{content:"▾";transition:transform .15s}
+details.fields[open]>summary::after{transform:rotate(180deg)}
+details.fields[open]>summary{margin-bottom:6px}
+.foot-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--mute);border-top:1px solid var(--line);padding-top:20px;margin-top:8px}
+
+@media(max-width:880px){.shell{grid-template-columns:1fr}.toc{position:static;max-height:none}.main{padding:26px 20px 70px}.hero{padding:44px 22px 34px}}
+
+/* hero status card */
+.hero-in{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:end;max-width:1300px}
+.hero-status{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 18px;font-size:13px;color:rgba(255,255,255,.88)}
+.hero-status .hs-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hero-status .hs-row:last-child{border-bottom:0}
+.hero-status b{color:#fff;font-weight:600;text-align:right}
+.hero-status .hs-row>span:first-child{white-space:nowrap}
+.hs-pill{display:inline-block;background:#FDE7B0;color:#7A5200;border-radius:20px;padding:0 9px;font-size:11.5px;font-weight:700}
+@media(max-width:980px){.hero-in{grid-template-columns:1fr}.hero-status{max-width:420px}}
+/* section links */
+a.xref{color:inherit;text-decoration:underline;text-decoration-color:rgba(74,63,160,.45);text-underline-offset:2px;text-decoration-thickness:1px}
+a.xref:hover{color:#4A3FA0;text-decoration-color:#4A3FA0}
+.hero a.xref{text-decoration-color:rgba(255,255,255,.6)}.hero a.xref:hover{color:#fff}
+section h2,section h3{scroll-margin-top:16px}
+.flash{animation:flash 1.6s ease-out}
+@keyframes flash{0%{background:#FFF3C4}100%{background:transparent}}
+/* toc active + subsections */
+.toc a.on{background:#ECEAF8;color:#2E2A83;font-weight:600}
+.toc .sub{display:none;margin:2px 0 8px 24px;border-left:1px solid var(--line)}
+.toc .grp.open .sub{display:block}
+.toc .sub a{font-size:12.5px;padding:5px 10px;color:var(--mute)}
+.toc .sub a.on{background:none;color:#2E2A83;font-weight:600}
+/* what changed */
+.whatsnew{border:1px solid #CFE6DA;background:#F2FAF6;border-radius:14px;padding:16px 20px;margin:18px 0 8px}
+.whatsnew h4{margin:0 0 8px;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#17694A}
+.whatsnew ul{margin:0;padding-left:18px}
+.whatsnew li{margin:4px 0;font-size:14px}
+.whatsnew .mini{margin-top:8px}
+/* lifecycle diagram */
+.lifecycle{overflow-x:auto;margin:10px 0 14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.lifecycle svg{display:block;min-width:720px;width:100%;height:auto}
+/* print */
+@media print{
+  @page{margin:14mm}
+  body{background:#fff}
+  .toc,.presets,.cset button,.ctl,.calc-head .presets{display:none!important}
+  .shell{display:block}
+  .main{padding:0;max-width:none}
+  .hero{background:none!important;color:#111;padding:0 0 14px;border-bottom:2px solid #2E2A83}
+  .hero h1,.hero .meta b,.hero-status b{color:#111}
+  .hero p,.hero .kicker,.hero .meta,.hero-status{color:#333}
+  .hero-status{background:none;border:1px solid #ccc;max-width:360px;margin-top:12px}
+  .hero{margin-bottom:22px}
+  .hero-status .hs-row{border-color:#ddd}
+  a.xref{text-decoration:none}
+  table,.wdg,.callout,.cell,.lifecycle,svg,tr{break-inside:avoid}
+  h2,h3,h4{break-after:avoid}
+  section{break-before:auto}
+  .wrap{overflow:visible}
+}
+/* competitor analysis additions */
+.tag.off{background:var(--ok-bg);color:var(--ok-tx);border:1px solid var(--ok-bd)}
+.tag.tp{background:#F1F2F6;color:#4B5261;border:1px solid var(--line)}
+.tag.uv{background:var(--warn-bg);color:var(--warn-tx);border:1px solid var(--warn-bd)}
+.tag.us{background:var(--new-bg);color:var(--new-tx);border:1px solid var(--new-bd)}
+.models{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0 18px}
+.model{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--indigo);border-radius:var(--r);padding:14px 15px}
+.model .mk{font-size:10.5px;font-weight:700;color:var(--faint);letter-spacing:.05em;text-transform:uppercase}
+.model h4{font-size:14.5px;margin:3px 0 6px}
+.model p{font-size:13px;color:var(--mute);margin:0 0 8px}
+.model .pay{font-size:12.5px;font-weight:600;color:var(--ink)}
+.model.m1{border-top-color:#0E7A63}.model.m2{border-top-color:#1C6FA8}.model.m3{border-top-color:#4A3FA0}.model.m4{border-top-color:#B0522A}.model.m5{border-top-color:#4B5261}
+.prof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line2)}
+.prof>div{padding:12px 14px;font-size:13.5px}
+.prof>div:first-child{border-right:1px solid var(--line2)}
+.prof h5{margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.prof ul{margin:0;padding-left:16px}
+.prof li{margin-bottom:3px}
+.wdg .facts{padding:12px 14px;font-size:13.5px}
+.wdg .facts dl{display:grid;grid-template-columns:130px 1fr;gap:6px 14px;margin:0}
+.wdg .facts dt{font-weight:600;color:var(--ink)}.wdg .facts dd{margin:0}
+.wdg .take{padding:10px 14px;background:var(--new-bg);border-top:1px solid var(--new-bd);font-size:13.5px;color:#3B2380}
+.wdg .take b{color:var(--new-tx)}
+@media(max-width:700px){.prof{grid-template-columns:1fr}.prof>div:first-child{border-right:0;border-bottom:1px solid var(--line2)}.wdg .facts dl{grid-template-columns:1fr}}
+.y{color:var(--ok-tx);font-weight:700}.n{color:#B42318;font-weight:700}.p{color:var(--warn-tx);font-weight:700}
+.cmp td:first-child{font-weight:600;color:var(--ink)}
+.cmp tr.us td{background:#F7F4FF}
+.gapgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0}
+.gapc{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.gapc .gn{font-family:Sora,Inter,sans-serif;font-size:22px;font-weight:700;color:var(--indigo);line-height:1}
+.gapc h4{font-size:14.5px;margin:8px 0 6px}
+.gapc p{font-size:13.5px;margin:0;color:var(--txt)}
+.gapc .who{font-size:12px;color:var(--mute);margin-top:8px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:16px}
+.kpi{border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:#fff}
+.kpi .k{font-size:11.5px;color:var(--mute)}
+.kpi .v{font-family:Sora,Inter,sans-serif;font-size:17px;font-weight:700;color:var(--ink);margin-top:2px;white-space:nowrap}
+.kpi.hl{background:var(--new-bg);border-color:var(--new-bd)}
+.kpi.hl .v{color:var(--new-tx)}
+.ctl input[type=number]{width:100%;height:38px;border:0;font-size:14px;font-weight:500;font-family:inherit;color:var(--ink);background:transparent}
+.ctl input[type=number]:focus{outline:none}
+.ctl .unit{font-size:12.5px;color:var(--mute);margin-left:6px;white-space:nowrap}
+.src{font-size:11.5px;color:var(--mute);white-space:nowrap}
+.src a{color:var(--mute);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}
+.src a:hover{color:var(--accent)}
+.kpi .s{font-size:11px;margin-top:3px}
+.kpi .s a{color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="hero"><div class="hero-in"><div>
+  <div class="kicker">COMPETITOR ANALYSIS · UPGRAD GROWTH · PARTNER UNIVERSITY SITES</div>
+  <h1>Influencer Affiliate Programme for CU Online</h1>
+  <p>What the strongest creator programmes (Chewy, Amazon, Sephora, Gymshark, Walmart, Myntra, Nykaa) do, and how to turn that into an influencer programme for Chandigarh University Online. Creators are paid a share of each enrolled student's total fees. Read section 0 for the answer, section 5 for the payout model, section 7 for the legal checks and section 8 for the plan.</p>
+  <div class="meta">
+    <span><b>Owner</b>: Abhinav Thakur (PM)</span>
+    <span><b>Partner</b>: CU Online (Chandigarh University)</span>
+    <span><b>Research date</b>: 29 Oct 2026</span>
+  </div>
+  </div>
+  <div class="hero-status">
+    <div class="hs-row"><span>Status</span><span class="hs-pill">Draft v1</span></div>
+    <div class="hs-row"><span>Last updated</span><b>29 Oct 2026</b></div>
+    <div class="hs-row"><span>Payout model</span><b>% of total fees per enrolment</b></div>
+    <div class="hs-row"><span>Programmes reviewed</span><b>11 (8 retail, 3 learning)</b></div>
+  </div>
+</div></div>
+<div class="shell">
+  <aside class="toc"><div id="toc-card"></div></aside>
+  <main class="main" id="main">
+
+<section id="overview">
+  <h2><span class="num">0.</span>Summary</h2>
+  <div class="tldr">
+    <h4>At a glance</h4>
+    <dl>
+      <dt>Question</dt><dd>What do the best influencer affiliate programmes do, and what should ours look like for CU Online?</dd>
+      <dt>Answer</dt><dd>The strongest programmes are retail, not education. They share six building blocks (2): a creator storefront, links plus codes, a live dashboard, an open door with an invite-only top tier, bonuses for consistent creators, and free product so creators can speak from experience.</dd>
+      <dt>The gap</dt><dd>No one runs this playbook for degrees. Coursera pays affiliates up to ~45% on courses but <b>excludes degrees</b> (3.10).</dd>
+      <dt>Payout</dt><dd>Creators get a <b>percentage of the student's total programme fee</b> for each paid enrolment. It is calculated on the fee after scholarships, paid in two parts as fees come in, and shown to creators in rupees. At CU's listed ₹2,00,000 MBA fee, every 1% is ₹2,000 (5).</dd>
+      <dt>Legal</dt><dd>Paying individuals a share of student fees needs counsel's sign-off (7.2). CU's site also carries claims creators must not repeat as they stand: two different NIRF ranks, "32 seats left" urgency, and Harvard, Microsoft and AWS branding. Many UG applicants are under 18 (7).</dd>
+      <dt>Recommendation</dt><dd>A CU Creator Programme with three levels (5%, 7%, and 8% plus a fixed fee), with creators matched to CU programmes: tech creators for BCA, MCA and Data Science, career creators for MBA, and media creators for Journalism (8).</dd>
+      <dt>How to read</dt><dd>Sections 1 to 4 cover the market: why retail, the playbook, the programme profiles and the comparison. Section 5 is the payout model with a calculator, 6 adapts the playbook to degrees, 7 is the legal checks, 8 the plan and 9 the open questions.</dd>
+    </dl>
+  </div>
+  <h3><span class="num">0.1</span>About CU Online</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:26%"><col style="width:74%"></colgroup>
+    <tr><th>Topic</th><th>What CU Online's site says</th></tr>
+    <tr><td>Undergraduate</td><td>BBA (15 specialisations), BBA Business Analytics, BCA (incl. Data Science, Cloud &amp; Cyber Security, Agentic AI, AR &amp; VR, UI &amp; UX), BA Journalism &amp; Mass Communication. 3 years, open to 10+2 pass-outs. <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></td></tr>
+    <tr><td>Postgraduate</td><td>MBA (27 specialisations), MBA Business Analytics, MCA (incl. Microsoft and AWS cloud tracks), M.Sc. Data Science (incl. Generative AI), M.Sc. Mathematics, MA English, MA Economics, MA Journalism &amp; Mass Communication. 2 years. <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></td></tr>
+    <tr><td>Fees (total)</td><td>BA JMC ₹1,35,000 · BBA ₹1,56,000 · BCA ₹1,65,000 · MA JMC ₹1,00,000 · MBA ₹2,00,000. Payable yearly or by semester. <span class="src">[<a href="https://www.onlinecu.in/faq.php" target="_blank" rel="noopener">CU Online: FAQ</a>]</span> Careers360 lists lower figures, e.g. MBA ₹1.65 lakh. <span class="src">[<a href="https://www.careers360.com/colleges/chandigarh-university-online" target="_blank" rel="noopener">Careers360</a>]</span> <span class="tag uv">Confirm with CU</span></td></tr>
+    <tr><td>Offers</td><td>Early-bird scholarship of up to 25%, seat booking for ₹10,000, no-cost EMI. <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a> · <a href="https://www.onlinecu.in/aboutus.php" target="_blank" rel="noopener">CU Online: About</a>]</span></td></tr>
+    <tr><td>Recognition</td><td>"Entitled by UGC to offer online degree programs". MBA and MCA approved by AICTE. <span class="src">[<a href="https://www.onlinecu.in/faq.php" target="_blank" rel="noopener">CU Online: FAQ</a>]</span> NAAC A+. <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></td></tr>
+    <tr><td>How leads come in</td><td>Apply form with OTP and consent to email, SMS and WhatsApp; free counselling session; request a call; scholarship pop-up; WhatsApp and a toll-free number. <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></td></tr>
+    <tr><td>Referral or affiliate programme</td><td><b>None found.</b> <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></td></tr>
+  </table></div>
+  <h3><span class="num">0.2</span>How sure we are</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:26%"><col style="width:74%"></colgroup>
+    <tr><th>Tag</th><th>Meaning</th></tr>
+    <tr><td><span class="tag off">Official</span></td><td>From the brand's own website or announcement.</td></tr>
+    <tr><td><span class="tag tp">Third-party</span></td><td>From trade press, an affiliate network or a creator guide. Likely right, but may be out of date.</td></tr>
+    <tr><td><span class="tag uv">Unverified</span></td><td>Sources disagree, or it comes from one weak source. Don't quote it without checking.</td></tr>
+  </table></div>
+</section>
+
+<section id="why">
+  <h2><span class="num">1.</span>Why look at retail</h2>
+  <p>Education brands mostly buy one-off sponsored posts or list a plain affiliate link. Retail brands have built full systems that recruit, equip, reward and keep thousands of creators:</p>
+  <div class="kpis">
+    <div class="kpi"><div class="k">Myntra Ultimate Glam Clan</div><div class="v">~3.5M creators</div><div class="k s"><a href="https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613" target="_blank" rel="noopener">Social Samosa</a></div></div>
+    <div class="kpi"><div class="k">Myntra revenue from social commerce</div><div class="v">10%+</div><div class="k s"><a href="https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613" target="_blank" rel="noopener">Social Samosa</a></div></div>
+    <div class="kpi"><div class="k">Nykaa influencers and affiliates</div><div class="v">100k+</div><div class="k s"><a href="https://www.buzzincontent.com/news/nykaa-says-it-has-indias-biggest-creator-army-and-the-numbers-are-massive-11081177" target="_blank" rel="noopener">BuzzInContent</a></div></div>
+    <div class="kpi"><div class="k">Chewy Storefront creators</div><div class="v">600+</div><div class="k s"><a href="https://www.retaildive.com/news/chewy-creator-storefronts-holiday-season/805118/" target="_blank" rel="noopener">Retail Dive</a></div></div>
+    <div class="kpi"><div class="k">Sephora Squad applicants, 2023</div><div class="v">16,000+</div><div class="k s"><a href="https://archive.com/blog/sephora-influencer-marketing-strategy" target="_blank" rel="noopener">Archive</a></div></div>
+  </div>
+  <p style="margin-top:14px">An online degree is a different purchase: lakhs of rupees, a decision that takes weeks, and a counsellor in the middle. But the mechanics of tracking, rewarding and growing creators carry over. Section 6 covers what has to change.</p>
+</section>
+
+<section id="playbook">
+  <h2><span class="num">2.</span>The playbook: six building blocks</h2>
+  <p>Every strong programme in section 3 combines most of these six.</p>
+  <div class="models">
+    <div class="model m1"><div class="mk">Block 1</div><h4>Creator storefront</h4><p>A page the creator curates with their own picks. Chewy, Amazon, Sephora, LTK.</p></div>
+    <div class="model m2"><div class="mk">Block 2</div><h4>Links plus codes</h4><p>A link for posts and a spoken code for videos and lives. Chewy, Gymshark.</p></div>
+    <div class="model m3"><div class="mk">Block 3</div><h4>Live dashboard</h4><p>Creators see their clicks, sales and earnings themselves. Chewy, Nykaa, LTK.</p></div>
+    <div class="model m4"><div class="mk">Block 4</div><h4>Open door, invite-only top tier</h4><p>Anyone can join the affiliate tier. An exclusive cohort sits above it. Gymshark, Sephora.</p></div>
+    <div class="model m5"><div class="mk">Block 5</div><h4>Bonuses for consistency</h4><p>Extra pay for regular posting and sales, plus boosts at peak times. Walmart, Amazon Prime Day.</p></div>
+    <div class="model m1"><div class="mk">Block 6</div><h4>Free product</h4><p>Creators use the product before they talk about it. Chewy's nano-creators, Gymshark athletes.</p></div>
+  </div>
+  <h3><span class="num">2.1</span>The creator ladder</h3>
+  <p>The best programmes move creators upward instead of treating all of them the same:</p>
+  <div class="flows"><div class="flow">
+    <div class="step s1"><b>Open affiliate</b><span>Anyone who meets a low bar joins, gets links and a dashboard. Nykaa: 5K+ followers. Myntra: no minimum. <span class="src">[<a href="https://affiliate.nykaa.com/" target="_blank" rel="noopener">Nykaa</a> · <a href="https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613" target="_blank" rel="noopener">Social Samosa</a>]</span></span></div>
+    <div class="step s2"><b>Rewarded regular</b><span>Bonuses and higher rates for consistent posting and sales. Walmart tiered bonus, Myntra 15% for top performers. <span class="src">[<a href="https://corporate.walmart.com/news/2025/11/12/creators-at-the-core-evolving-the-walmart-creator-program-together" target="_blank" rel="noopener">Walmart</a> · <a href="https://joinotto.com/en-in/influencer-programs/myntra" target="_blank" rel="noopener">Otto</a>]</span></span></div>
+    <div class="step s4"><b>Invite-only cohort</b><span>A small group, paid and supported for a year. Sephora Squad, Gymshark athletes. <span class="src">[<a href="https://www.tubefilter.com/2021/06/07/sephorasquad-third-class-beauty-influencer-marketing-program/" target="_blank" rel="noopener">Tubefilter</a> · <a href="https://bixgrow.com/gymshark-affiliate-program/" target="_blank" rel="noopener">BixGrow</a>]</span></span></div>
+  </div></div>
+</section>
+
+<section id="profiles">
+  <h2><span class="num">3.</span>Programme profiles</h2>
+  <p>One card per programme. Each fact links to its source. Each card ends with what to borrow for CU Online.</p>
+
+  <h3><span class="num">3.1</span>Chewy</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Chewy · Chewpanions and Chewy Storefronts</b><span class="whh">Pets, US</span><span class="tag off">Official</span><span class="tag tp">Trade press</span></div>
+    <div class="facts"><dl>
+      <dt>How it works</dt><dd>Creators curate a storefront of pet products, share custom links and earn commission when followers buy. They also get exclusive creator perks. <span class="src">[<a href="https://chewpanions.chewy.com/" target="_blank" rel="noopener">Chewy</a>]</span></dd>
+      <dt>Storefronts</dt><dd>Launched in 2024 as an extension of the influencer programme. More than 600 creators by Nov 2025, still taking applications. Creators build multi-brand collections tailored to breed, size and type of pet. <span class="src">[<a href="https://www.retaildive.com/news/chewy-creator-storefronts-holiday-season/805118/" target="_blank" rel="noopener">Retail Dive</a> · <a href="https://www.netinfluencer.com/chewy-expands-creator-commerce-platform-to-600-influencers-ahead-of-holiday-pet-spending-surge/" target="_blank" rel="noopener">Net Influencer</a>]</span></dd>
+      <dt>Tools</dt><dd>A dedicated performance dashboard and a unique sales code for followers, on top of affiliate links. <span class="src">[<a href="https://www.retaildive.com/news/chewy-creator-storefronts-holiday-season/805118/" target="_blank" rel="noopener">Retail Dive</a>]</span></dd>
+      <dt>Commission</dt><dd>Flat $15 per new-customer order, which Chewy says equals about 8% for most partners. <span class="src">[<a href="https://geniuslink.com/blog/chewy-affiliate-program/" target="_blank" rel="noopener">Geniuslink</a>]</span></dd>
+      <dt>Seeding</dt><dd>Creators receive real Chewy products tied to their own pet's needs (senior-dog joint supplements, kitten starter kits), not generic gift boxes. <span class="src">[<a href="https://www.influencers-time.com/how-chewy-turned-nano-creators-into-a-tiktok-subscription-en/" target="_blank" rel="noopener">Influencers Time</a>]</span></dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Why it works</h5><ul><li>Storefronts let creators recommend for their own audience, by breed and size</li><li>A code works in video, where links don't</li><li>Paying more for new customers rewards real growth</li></ul></div>
+      <div><h5>Watch out</h5><ul><li>Built for repeat, low-cost orders</li><li>Commission details aren't on the public page</li></ul></div>
+    </div>
+    <div class="take"><b>Borrow:</b> a storefront for each creator, organised by career goal instead of breed ("MCA for working developers", "BBA after Class 12"), plus a code for every creator, and a reward that counts only new students.</div>
+  </div>
+
+  <h3><span class="num">3.2</span>Amazon</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Amazon Influencer Program</b><span class="whh">Marketplace, global</span><span class="tag tp">Third-party</span></div>
+    <div class="facts"><dl>
+      <dt>How it works</dt><dd>A personal shoppable storefront and shoppable videos, on top of normal affiliate links. <span class="src">[<a href="https://loudcrowd.com/blog/amazon-influencer-program-everything-you-need-to-know/" target="_blank" rel="noopener">LoudCrowd</a>]</span></dd>
+      <dt>Commission</dt><dd>Amazon's standard rates apply to traffic creators send: kitchen 4.5%, apparel 4%, home, beauty and toys 3%, luxury beauty 10%. <span class="src">[<a href="https://creatorflow.so/blog/amazon-associates-vs-influencer-program/" target="_blank" rel="noopener">Creatorflow</a>]</span> Videos placed on Amazon itself pay 0–5% in the US. <span class="src">[<a href="https://viralvue.com/blog/how-much-do-amazon-influencers-make" target="_blank" rel="noopener">Viralvue</a>]</span></dd>
+      <dt>Boosts</dt><dd>Up to double the usual rates in 13 categories from 1 to 20 July 2025, around an extended Prime Day. <span class="src">[<a href="https://www.tubefilter.com/2025/07/03/amazon-prime-day-creator-commissions/" target="_blank" rel="noopener">Tubefilter</a> · <a href="https://hellopartner.com/amazon-doubles-influencer-commissions-ahead-of-extended-prime-day/" target="_blank" rel="noopener">Hello Partner</a>]</span></dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Why it works</h5><ul><li>Creator videos appear where buyers are deciding</li><li>Time-limited boosts drive bursts of content</li></ul></div>
+      <div><h5>Watch out</h5><ul><li>Low rates; volume does the work</li><li>Rate tables change often</li></ul></div>
+    </div>
+    <div class="take"><b>Borrow:</b> put creator videos on CU Online's programme pages, where students compare options. Run a commission boost in the weeks before each real early-bird deadline.</div>
+  </div>
+
+  <h3><span class="num">3.3</span>Sephora</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Sephora · #SephoraSquad and My Sephora Storefront</b><span class="whh">Beauty, US</span><span class="tag tp">Trade press</span></div>
+    <div class="facts"><dl>
+      <dt>Squad</dt><dd>A yearlong, paid programme that gives emerging creators resources and mentorship in exchange for campaign work. <span class="src">[<a href="https://www.tubefilter.com/2021/06/07/sephorasquad-third-class-beauty-influencer-marketing-program/" target="_blank" rel="noopener">Tubefilter</a>]</span> We found no public pay figures.</dd>
+      <dt>Selection</dt><dd>About 16,000 completed applications in 2019, backed by more than 250,000 testimonials from applicants' own followers on Instagram. <span class="src">[<a href="https://www.glossy.co/beauty/inside-sephoras-sephorasquad-influencer-ambassador-program/" target="_blank" rel="noopener">Glossy</a>]</span> 16,000+ applications for the 2023 cohort. <span class="src">[<a href="https://archive.com/blog/sephora-influencer-marketing-strategy" target="_blank" rel="noopener">Archive</a>]</span> Cohorts are deliberately diverse: 79% of the 2021 class identified as people of colour. <span class="src">[<a href="https://www.tubefilter.com/2021/06/07/sephorasquad-third-class-beauty-influencer-marketing-program/" target="_blank" rel="noopener">Tubefilter</a>]</span></dd>
+      <dt>Storefront</dt><dd>My Sephora Storefront, an affiliate storefront, launched in Sep 2025. <span class="src">[<a href="https://www.retaildive.com/news/chewy-creator-storefronts-holiday-season/805118/" target="_blank" rel="noopener">Retail Dive</a>]</span></dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Why it works</h5><ul><li>Being chosen is itself a reward and makes good publicity</li><li>Follower testimonials show trust, not just reach</li></ul></div>
+      <div><h5>Watch out</h5><ul><li>Costs a lot per creator; only works for a small group</li></ul></div>
+    </div>
+    <div class="take"><b>Borrow:</b> a yearly <b>CU Creator Squad</b> of 10–15 creators. They apply with testimonials from their followers, and CU faculty mentor them.</div>
+  </div>
+
+  <h3><span class="num">3.4</span>Gymshark</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Gymshark · athletes and affiliates</b><span class="whh">Fitness, UK and global</span><span class="tag tp">Third-party</span></div>
+    <div class="facts"><dl>
+      <dt>Athletes</dt><dd>A separate, invitation-only programme. Gymshark's partnerships team scouts fitness creators whose values match the brand. <span class="src">[<a href="https://bixgrow.com/gymshark-affiliate-program/" target="_blank" rel="noopener">BixGrow</a> · <a href="https://www.referly.so/affiliate-programs/gymshark" target="_blank" rel="noopener">Referly</a>]</span></dd>
+      <dt>Affiliates</dt><dd>Open to all through affiliate networks such as Rakuten Advertising and Awin, with a 30-day cookie. <span class="src">[<a href="https://bixgrow.com/gymshark-affiliate-program/" target="_blank" rel="noopener">BixGrow</a> · <a href="https://www.awin.com/us/news-and-events/program-news/new-affiliate-program-gymshark" target="_blank" rel="noopener">Awin</a>]</span> Reported rates differ: 4% and 6%. <span class="src">[<a href="https://bixgrow.com/gymshark-affiliate-program/" target="_blank" rel="noopener">BixGrow</a> · <a href="https://www.affiliateroll.com/programs/gymshark" target="_blank" rel="noopener">AffiliateRoll</a>]</span> <span class="tag uv">Rates vary</span></dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Why it works</h5><ul><li>Two doors: a wide open one and a small exclusive one</li><li>Athletes become the face of the brand</li></ul></div>
+      <div><h5>Watch out</h5><ul><li>The open affiliate tier gets little support</li></ul></div>
+    </div>
+    <div class="take"><b>Borrow:</b> keep the open affiliate tier and the invite-only tier clearly separate. Choose the invite-only creators for fit with the programme, not follower count.</div>
+  </div>
+
+  <h3><span class="num">3.5</span>Walmart</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Walmart Creator</b><span class="whh">Retail, US</span><span class="tag off">Official</span><span class="tag tp">Rates third-party</span></div>
+    <div class="facts"><dl>
+      <dt>How it works</dt><dd>Launched in 2022. <span class="src">[<a href="https://www.retaildive.com/news/chewy-creator-storefronts-holiday-season/805118/" target="_blank" rel="noopener">Retail Dive</a>]</span> Creators earn on eligible products bought through their links. A gamified, milestone-based bonus rewards consistent posting and strong sales. Creators also get storefronts and full sales insights. <span class="src">[<a href="https://corporate.walmart.com/news/2025/11/12/creators-at-the-core-evolving-the-walmart-creator-program-together" target="_blank" rel="noopener">Walmart</a>]</span></dd>
+      <dt>Credit window</dt><dd>One click earns commission on everything the shopper buys for 14 days. Commission is locked for 30 days in case of returns and paid monthly through Impact. <span class="src">[<a href="https://creatorflow.so/blog/walmart-creator-program/" target="_blank" rel="noopener">Creatorflow</a>]</span></dd>
+      <dt>Rates</dt><dd>Up to 18% via Walmart Creator. <span class="src">[<a href="https://argil.ai/blog/walmart-affiliate-program-cd8f1" target="_blank" rel="noopener">Argil</a>]</span> Creatorflow notes that rate cards circulating online are unsourced; real rates are visible only after logging in. <span class="src">[<a href="https://creatorflow.so/blog/walmart-creator-program/" target="_blank" rel="noopener">Creatorflow</a>]</span> <span class="tag uv">Unverified</span></dd>
+    </dl></div>
+    <div class="prof">
+      <div><h5>Why it works</h5><ul><li>Pays for regular posting, not just sales</li><li>A wide credit window keeps creators happy</li></ul></div>
+      <div><h5>Watch out</h5><ul><li>Rates are not clearly published</li></ul></div>
+    </div>
+    <div class="take"><b>Borrow:</b> a monthly bonus for consistent posting, and credit for any CU Online programme the student enrols in, not only the one the creator promoted. Hold commission until the refund window closes.</div>
+  </div>
+
+  <h3><span class="num">3.6</span>LTK</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>LTK (formerly rewardStyle)</b><span class="whh">Creator platform</span><span class="tag tp">Third-party</span></div>
+    <div class="facts"><dl>
+      <dt>How it works</dt><dd>A platform that sits between many brands and creators. Each brand sets its own rate. Creators apply directly, and LTK favours consistent, niche-focused creators over large follower counts. <span class="src">[<a href="https://instantdm.com/blog/ltk-affiliate-program" target="_blank" rel="noopener">InstantDM</a>]</span></dd>
+      <dt>Rates</dt><dd>Usually 5–15% depending on the brand, up to 25%+ for premium retailers. <span class="src">[<a href="https://instantdm.com/blog/ltk-affiliate-program" target="_blank" rel="noopener">InstantDM</a>]</span></dd>
+    </dl></div>
+    <div class="take"><b>Borrow:</b> this is the long-term model for upGrad. Build one creator platform, then add each partner university as a "brand" with its own rates.</div>
+  </div>
+
+  <h3><span class="num">3.7</span>Myntra</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Myntra · Ultimate Glam Clan and affiliates</b><span class="whh">Fashion, India</span><span class="tag tp">Trade press</span></div>
+    <div class="facts"><dl>
+      <dt>Glam Clan</dt><dd>Launched Sep 2024. Shoppers post photo and video reviews, and earn commission when another user buys through them. No follower minimum. About 1M shopper-creators by Jun 2025 and ~3.5M by Nov 2025; 66% are Gen Z. <span class="src">[<a href="https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613" target="_blank" rel="noopener">Social Samosa</a>]</span></dd>
+      <dt>Affiliates</dt><dd>Creators who promote Myntra on Instagram, YouTube and Snapchat. <span class="src">[<a href="https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613" target="_blank" rel="noopener">Social Samosa</a>]</span> Reported rates are 10% base and 15% for top performers, with a 30-day cookie. <span class="src">[<a href="https://joinotto.com/en-in/influencer-programs/myntra" target="_blank" rel="noopener">Otto</a>]</span> <span class="tag uv">Unverified</span></dd>
+      <dt>Results</dt><dd>Social commerce is 10%+ of Myntra's revenue. Engaging with shopper-creator content raises conversion by 25%, according to Myntra's CMO. <span class="src">[<a href="https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613" target="_blank" rel="noopener">Social Samosa</a>]</span></dd>
+    </dl></div>
+    <div class="take"><b>Borrow:</b> turn <b>students and alumni into creators</b>. Their reviews and "a week in my online MBA" videos convert because they're real. This is our alumni level (8.2).</div>
+  </div>
+
+  <h3><span class="num">3.8</span>Nykaa</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Nykaa · Affiliate Program (NAP)</b><span class="whh">Beauty, India</span><span class="tag off">Official</span><span class="tag tp">Trade press</span></div>
+    <div class="facts"><dl>
+      <dt>Terms</dt><dd>8% on every purchase, the same for all affiliates and categories. Open to creators with 5K+ followers, who generate links from a dashboard. <span class="src">[<a href="https://affiliate.nykaa.com/" target="_blank" rel="noopener">Nykaa</a>]</span> One third-party guide lists 9%. <span class="src">[<a href="https://earnkaro.com/blog/nykaa-affiliate-program" target="_blank" rel="noopener">EarnKaro</a>]</span></dd>
+      <dt>Scale</dt><dd>100k+ influencers and affiliates, and 2M+ pieces of content (Feb 2026). Its Nykaaland event drew 3,000+ creators and 10,000+ pieces of content. <span class="src">[<a href="https://www.buzzincontent.com/news/nykaa-says-it-has-indias-biggest-creator-army-and-the-numbers-are-massive-11081177" target="_blank" rel="noopener">BuzzInContent</a>]</span></dd>
+      <dt>Partnerships</dt><dd>YouTube Shopping Affiliate programme <span class="src">[<a href="https://indiantelevision.com/news-headline/youtube-adds-nykaa-and-purplle-to-shopping-affiliate-programme-as-beauty-commerce-booms-251011/" target="_blank" rel="noopener">Indian Television</a>]</span>, and a beauty-creator incubator with Snapchat. <span class="src">[<a href="https://www.buzzincontent.com/news/nykaa-says-it-has-indias-biggest-creator-army-and-the-numbers-are-massive-11081177" target="_blank" rel="noopener">BuzzInContent</a>]</span></dd>
+    </dl></div>
+    <div class="take"><b>Borrow:</b> one simple published rate for the open level, plus events (a creator day at CU's Mohali campus, or online) that produce a burst of content.</div>
+  </div>
+
+  <h3><span class="num">3.9</span>MasterClass and Skillshare</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>MasterClass · Skillshare</b><span class="whh">Online learning</span><span class="tag tp">Third-party</span></div>
+    <div class="facts"><dl>
+      <dt>MasterClass</dt><dd>20% of subscription purchases, through the FlexOffers network. <span class="src">[<a href="https://www.flexoffers.com/affiliate-programs/masterclass-affiliate-program/" target="_blank" rel="noopener">FlexOffers</a>]</span></dd>
+      <dt>Skillshare</dt><dd>Disputed: 40% in older listings <span class="src">[<a href="https://blog.monetizedeal.com/skillshare-affiliate-program/" target="_blank" rel="noopener">Monetizedeal</a>]</span>, and 20% capped at $34 per new customer in a recent check of Skillshare's own page. <span class="src">[<a href="https://ancaster.io/offers/skillshare" target="_blank" rel="noopener">Ancaster</a>]</span> <span class="tag uv">Unverified</span></dd>
+    </dl></div>
+    <div class="take"><b>Borrow:</b> learning brands pay much higher percentages than retail (about 20–45% against 3–18%), because selling a learning product costs little to deliver once it's built.</div>
+  </div>
+
+  <h3><span class="num">3.10</span>Coursera</h3>
+  <div class="wdg">
+    <div class="wdg-h"><b>Coursera Affiliate Program</b><span class="whh">Online learning</span><span class="tag tp">Third-party</span></div>
+    <div class="facts"><dl>
+      <dt>Commission</dt><dd>Up to 45% per sale, 30-day cookie. <span class="src">[<a href="https://www.creator-hero.com/blog/coursera-affiliate-program-in-depth-review-pros-and-cons" target="_blank" rel="noopener">Creator Hero</a>]</span> Tiered between about 15% and 45%, with bundles and Specializations near 20%. <span class="src">[<a href="https://xark.io/resources/edtech-online-course-affiliate-programs-comparison-2026" target="_blank" rel="noopener">Xark</a>]</span></dd>
+      <dt>Degrees</dt><dd><b>Degrees are excluded</b> from the affiliate programme. <span class="src">[<a href="https://whop.com/blog/creator-coursera-review/" target="_blank" rel="noopener">Whop</a>]</span></dd>
+    </dl></div>
+    <div class="take"><b>The gap:</b> even the biggest online learning platform doesn't pay creators for degree enrolments. A creator programme built for degrees has no direct competitor today.</div>
+  </div>
+</section>
+
+<section id="matrix">
+  <h2><span class="num">4.</span>Side-by-side comparison</h2>
+  <p><span class="y">✓</span> yes · <span class="p">~</span> partly · <span class="n">✗</span> no · blank means unknown. The last row is our proposal (8).</p>
+  <div class="wrap"><table class="cmp sec-table">
+    <tr><th>Programme</th><th>Storefront</th><th>Link + code</th><th>Dashboard</th><th>Open tier</th><th>Invite-only tier</th><th>Bonuses</th><th>Free product</th></tr>
+    <tr><td>Chewy</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td></td><td class="p">~</td><td class="p">~</td></tr>
+    <tr><td>Amazon</td><td class="y">✓</td><td class="p">~</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="y">✓</td><td></td></tr>
+    <tr><td>Sephora</td><td class="y">✓</td><td></td><td></td><td class="y">✓</td><td class="y">✓</td><td></td><td class="y">✓</td></tr>
+    <tr><td>Gymshark</td><td class="n">✗</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td></td><td class="y">✓</td></tr>
+    <tr><td>Walmart</td><td class="y">✓</td><td class="p">~</td><td class="y">✓</td><td class="y">✓</td><td></td><td class="y">✓</td><td></td></tr>
+    <tr><td>LTK</td><td class="y">✓</td><td class="p">~</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td></td><td></td></tr>
+    <tr><td>Myntra</td><td class="n">✗</td><td class="y">✓</td><td></td><td class="y">✓</td><td class="n">✗</td><td class="y">✓</td><td></td></tr>
+    <tr><td>Nykaa</td><td class="n">✗</td><td class="p">~</td><td class="y">✓</td><td class="y">✓</td><td class="p">~</td><td></td><td></td></tr>
+    <tr><td>Coursera, MasterClass, Skillshare</td><td class="n">✗</td><td class="p">~</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="n">✗</td><td></td></tr>
+    <tr class="us"><td>Proposed: CU Creator Programme</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+  </table></div>
+  <div class="callout info"><div class="ttl">How to read this</div>Retail programmes cover most of the six blocks. The learning programmes (last row before ours) offer only a link and a dashboard. Matching retail's full set for degrees is how we stand out.</div>
+</section>
+
+<section id="payouts">
+  <h2><span class="num">5.</span>Payout model: a share of total fees</h2>
+  <p>We pay creators per paid enrolment, as a percentage of the student's total programme fee. This section compares that with what other programmes pay, sets out the payout rules, and includes a calculator.</p>
+  <h3><span class="num">5.1</span>What others pay</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:28%"><col style="width:38%"><col style="width:34%"></colgroup>
+    <tr><th>Programme</th><th>Commission</th><th>Source</th></tr>
+    <tr><td>Amazon Influencer</td><td>~3–10% by category; 0–5% on Amazon itself</td><td><span class="tag tp">Third-party</span> <span class="src">[<a href="https://creatorflow.so/blog/amazon-associates-vs-influencer-program/" target="_blank" rel="noopener">Creatorflow</a> · <a href="https://viralvue.com/blog/how-much-do-amazon-influencers-make" target="_blank" rel="noopener">Viralvue</a>]</span></td></tr>
+    <tr><td>Gymshark affiliates</td><td>4–6%, 30-day cookie</td><td><span class="tag uv">Unverified</span> <span class="src">[<a href="https://bixgrow.com/gymshark-affiliate-program/" target="_blank" rel="noopener">BixGrow</a> · <a href="https://www.affiliateroll.com/programs/gymshark" target="_blank" rel="noopener">AffiliateRoll</a>]</span></td></tr>
+    <tr><td>Chewy</td><td>$15 per new customer (≈8%)</td><td><span class="tag tp">Third-party</span> <span class="src">[<a href="https://geniuslink.com/blog/chewy-affiliate-program/" target="_blank" rel="noopener">Geniuslink</a>]</span></td></tr>
+    <tr><td>Nykaa</td><td>8% flat (one guide says 9%)</td><td><span class="tag off">Official</span> <span class="src">[<a href="https://affiliate.nykaa.com/" target="_blank" rel="noopener">Nykaa</a> · <a href="https://earnkaro.com/blog/nykaa-affiliate-program" target="_blank" rel="noopener">EarnKaro</a>]</span></td></tr>
+    <tr><td>Myntra affiliates</td><td>10%; 15% for top performers</td><td><span class="tag uv">Unverified</span> <span class="src">[<a href="https://joinotto.com/en-in/influencer-programs/myntra" target="_blank" rel="noopener">Otto</a>]</span></td></tr>
+    <tr><td>LTK</td><td>Usually 5–15%, up to 25%+</td><td><span class="tag tp">Third-party</span> <span class="src">[<a href="https://instantdm.com/blog/ltk-affiliate-program" target="_blank" rel="noopener">InstantDM</a>]</span></td></tr>
+    <tr><td>Walmart Creator</td><td>Up to ~18% by category</td><td><span class="tag uv">Unverified</span> <span class="src">[<a href="https://argil.ai/blog/walmart-affiliate-program-cd8f1" target="_blank" rel="noopener">Argil</a> · <a href="https://creatorflow.so/blog/walmart-creator-program/" target="_blank" rel="noopener">Creatorflow</a>]</span></td></tr>
+    <tr><td>MasterClass</td><td>~20%</td><td><span class="tag tp">Third-party</span> <span class="src">[<a href="https://www.flexoffers.com/affiliate-programs/masterclass-affiliate-program/" target="_blank" rel="noopener">FlexOffers</a>]</span></td></tr>
+    <tr><td>Skillshare</td><td>20% capped at $34, or 40%</td><td><span class="tag uv">Unverified</span> <span class="src">[<a href="https://ancaster.io/offers/skillshare" target="_blank" rel="noopener">Ancaster</a> · <a href="https://blog.monetizedeal.com/skillshare-affiliate-program/" target="_blank" rel="noopener">Monetizedeal</a>]</span></td></tr>
+    <tr><td>Coursera</td><td>15–45%, none on degrees</td><td><span class="tag tp">Third-party</span> <span class="src">[<a href="https://xark.io/resources/edtech-online-course-affiliate-programs-comparison-2026" target="_blank" rel="noopener">Xark</a> · <a href="https://whop.com/blog/creator-coursera-review/" target="_blank" rel="noopener">Whop</a>]</span></td></tr>
+  </table></div>
+  
+  <div class="callout info"><div class="ttl">Why a percentage of the full fee works for degrees</div>Retail programmes pay 4–18% of a small basket. Our creators earn on a fee that runs into lakhs: 5% of CU's ₹2,00,000 MBA is ₹10,000 per enrolment. That beats most retail payouts while leaving room in the budget. Learning brands pay 20–45%, but only on low-cost courses.</div>
+
+  <h3><span class="num">5.2</span>Payout rules</h3>
+  <ul>
+    <li><b>Base:</b> the <b>net total fee</b>, meaning the full programme fee minus any scholarship or discount the student gets. Never the list price. With CU's up-to-25% early-bird scholarship, a ₹2,00,000 MBA can become ₹1,50,000.</li>
+    <li><b>Show creators rupees:</b> publish "you earn ₹X per MBA enrolment" for each programme and level, even though it's calculated as a percentage.</li>
+    <li><b>Paid when:</b> students pay CU by year or by semester, so a payout on the full fee at enrolment carries risk if the student drops out. Three options:</li>
+  </ul>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:22%"><col style="width:40%"><col style="width:38%"></colgroup>
+    <tr><th>Option</th><th>How it works</th><th>Trade-off</th></tr>
+    <tr><td>A. All upfront</td><td>Pay the full percentage after the first fee payment clears the refund window.</td><td>Best for creators. We carry the dropout risk and need clawbacks.</td></tr>
+    <tr><td>B. Per instalment</td><td>Pay the percentage on every fee instalment CU actually receives.</td><td>No dropout risk, but full payout takes 2–3 years. Creators lose interest.</td></tr>
+    <tr><td><b>C. Hybrid (recommended)</b></td><td><b>60%</b> of the payout once the first fee payment clears the refund window, and <b>40%</b> when the student pays for year 2.</td><td>Creators see most of the money within weeks. Dropouts in year 1 cost us only 60%.</td></tr>
+  </table></div>
+  <h3><span class="num">5.3</span>Starting rates to test</h3>
+  <p>Suggested rates by level (8.2). These are starting points to test against CU's agreement with us. On list fees before scholarships:</p>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:22%"><col style="width:20%"><col style="width:19%"><col style="width:19%"><col style="width:20%"></colgroup>
+    <tr><th>Programme</th><th>Total fee</th><th>Open 5%</th><th>Rising 7%</th><th>Squad 8%</th></tr>
+    <tr><td>MBA</td><td>₹2,00,000</td><td>₹10,000</td><td>₹14,000</td><td>₹16,000</td></tr>
+    <tr><td>BCA</td><td>₹1,65,000</td><td>₹8,250</td><td>₹11,550</td><td>₹13,200</td></tr>
+    <tr><td>BBA</td><td>₹1,56,000</td><td>₹7,800</td><td>₹10,920</td><td>₹12,480</td></tr>
+    <tr><td>BA JMC</td><td>₹1,35,000</td><td>₹6,750</td><td>₹9,450</td><td>₹10,800</td></tr>
+    <tr><td>MA JMC</td><td>₹1,00,000</td><td>₹5,000</td><td>₹7,000</td><td>₹8,000</td></tr>
+  </table></div>
+  <p class="mini">Fees from CU Online's FAQ. <span class="src">[<a href="https://www.onlinecu.in/faq.php" target="_blank" rel="noopener">CU Online: FAQ</a>]</span> MCA, M.Sc. and MA fees are not listed there; get them from CU.</p>
+  <h3><span class="num">5.4</span>Payout calculator</h3>
+  <div id="calc-root"></div>
+</section>
+
+<section id="adapt">
+  <h2><span class="num">6.</span>From retail to degrees</h2>
+  <p>A degree differs from a basket of shopping in four ways, and each changes how we use the playbook.</p>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:24%"><col style="width:32%"><col style="width:44%"></colgroup>
+    <tr><th>Difference</th><th>Retail approach</th><th>Our version for CU Online</th></tr>
+    <tr><td>Weeks to decide, not minutes</td><td>14–30 day credit window (Walmart, Gymshark)</td><td>A 60–90 day credit window. The creator's dashboard shows each lead moving through the stages, so they can see progress before the payout arrives.</td></tr>
+    <tr><td>Costs lakhs, not hundreds</td><td>A percentage of the basket</td><td>A percentage of the <b>net total fee</b>, shown in ₹ for each programme and paid in two parts (5.2).</td></tr>
+    <tr><td>Nothing to post in the mail</td><td>Free product (Chewy, Gymshark)</td><td>Free access to a CU Online masterclass or sample module, plus a creator day on the CU campus in Mohali. Don't give away third-party content such as Harvard ManageMentor without CU confirming it's allowed (7.7).</td></tr>
+    <tr><td>A counsellor makes the sale</td><td>Buyer checks out alone</td><td>The creator's storefront leads to a CU counsellor who knows who referred the student. The student's code also applies CU's real scholarship, if CU approves (9).</td></tr>
+  </table></div>
+</section>
+
+<section id="legal">
+  <h2><span class="num">7.</span>Legal checks</h2>
+  <p>Online degrees are regulated by UGC, and the ads around them by consumer law and ASCI. Paying creators a share of fees, and CU's own site claims, add CU-specific checks. All of these must be cleared before the pilot starts.</p>
+  <div class="callout warn"><div class="ttl">Not legal advice</div>This section lists the rules we found and how the programme should handle them. upGrad's and CU's legal teams must sign off before launch. Items marked <b>Ask counsel</b> are open legal questions.</div>
+
+  <h3><span class="num">7.1</span>Can each programme be promoted?</h3>
+  <ul>
+    <li>UGC tells students to confirm on the UGC-DEB website that a university is recognised for online programmes for the session they're joining. <span class="src">[<a href="https://news.careers360.com/ugc-shares-precautions-for-students-taking-admission-in-online-odl-programmes" target="_blank" rel="noopener">Careers360: UGC precautions</a> · <a href="https://deb.ugc.ac.in/" target="_blank" rel="noopener">UGC-DEB</a>]</span></li>
+    <li>CU says it is "entitled by UGC to offer online degree programs", and that its MBA and MCA are approved by AICTE. The certificate states the mode of study. <span class="src">[<a href="https://www.onlinecu.in/faq.php" target="_blank" rel="noopener">CU Online: FAQ</a>]</span> Its site links a UGC-DEB approval document. <span class="src">[<a href="https://www.onlinecu.in/aboutus.php" target="_blank" rel="noopener">CU Online: About</a>]</span></li>
+    <li>Chandigarh University also runs distance-learning programmes on a separate site (cuidol.in). <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span> Online and distance learning are different modes.</li>
+    <li><b>What we do:</b> creators promote only the <b>online</b> programmes CU confirms on the UGC-DEB list for the coming intake. Storefronts link to onlinecu.in only.</li>
+  </ul>
+
+  <h3><span class="num">7.2</span>Marketing only, and the fee-share question</h3>
+  <ul>
+    <li>UGC regulations say recognised institutions must not offer online programmes under any franchise arrangement. UGC has warned institutions about edtech tie-ups and edtechs advertising degrees on social media. <span class="src">[<a href="https://news.careers360.com/ugc-warns-of-action-against-institutions-offer-online-programmes-in-ties-edtech-firms" target="_blank" rel="noopener">Careers360: UGC warning</a> · <a href="https://www.tribuneindia.com/news/jobscareers/ugc-aicte-warn-against-franchise-arrangement-between-colleges-ed-tech-companies-362042/amp" target="_blank" rel="noopener">Tribune</a>]</span> Ads must not imply recognition that can't be proven. <span class="src">[<a href="https://nishithdesai.com/research-and-articles/hotline/education-sector-hotline/decoding-the-ugc-and-aictes-notices-on-franchising-and-mis-advertising-for-online-degree-programmes-5190" target="_blank" rel="noopener">Nishith Desai: UGC notices</a>]</span></li>
+    <li><b>What we do:</b> CU alone admits students, collects fees and awards the degree. upGrad and creators provide marketing services only. No creator collects money, "confirms admission", or calls themselves a CU representative.</li>
+    <li><b>Ask counsel:</b> paying individuals a <b>percentage of each student's fees</b> looks like what admission agents are paid. Before launch, get written sign-off that this works under a marketing services contract, paid for tracked, consented enrolments. If counsel says no, fall back to a flat fee per programme set at the same rupee level.</li>
+  </ul>
+
+  <h3><span class="num">7.3</span>Creators are liable for misleading ads</h3>
+  <ul>
+    <li>The consumer protection regulator (CCPA) can fine manufacturers or <b>endorsers</b> up to ₹10 lakh for a misleading ad, and up to ₹50 lakh for each repeat. Endorsers must do due diligence and disclose any material connection with the brand. <span class="src">[<a href="https://nishithdesai.com/research-and-articles/hotline/technology-law-analysis/guidelines-on-misleading-advertisements-and-endorsements-notified-under-the-consumer-protection-act-2019-6172" target="_blank" rel="noopener">Nishith Desai: CCPA guidelines</a> · <a href="https://ssrana.in/articles/new-endorsement-guidelines-social-media-influencers/" target="_blank" rel="noopener">S.S. Rana</a>]</span></li>
+    <li><b>What we do:</b> every creator gets a proof pack (UGC-DEB and AICTE letters, NAAC certificate, ranking sources, fee sheet) and an approved-claims sheet signed off by CU.</li>
+  </ul>
+
+  <h3><span class="num">7.4</span>Disclosure on every post</h3>
+  <ul>
+    <li>The government's "Endorsement Know-hows!" guide requires clear disclosure using terms such as "advertisement", "sponsored" or "paid promotion". <span class="src">[<a href="https://theleaflet.in/governance-and-policy/guidelines-mandate-social-media-influencers-to-make-clear-disclosures-on-endorsements" target="_blank" rel="noopener">The Leaflet</a> · <a href="https://khaitanco.com/sites/default/files/2023-02/Ergo_31012023.pdf" target="_blank" rel="noopener">Khaitan &amp; Co</a>]</span></li>
+    <li>ASCI accepts labels such as Ad, Sponsored, Collaboration and Partnership. The label must appear upfront, not hidden in a bio, and video-only posts need it on the video itself. Brands share responsibility. <span class="src">[<a href="https://www.ascionline.in/social/wp-content/uploads/2024/03/ASCIs-Guide-For-Influencers-1.pdf" target="_blank" rel="noopener">ASCI guide for influencers</a> · <a href="https://www.socialsamosa.com/2021/02/asci-influencer-advertising-guidelines" target="_blank" rel="noopener">Social Samosa</a> · <a href="https://khaitanco.com/thought-leaderships/ASCI-releases-influencer-advertising-guidelines-for-digital-media-Effective-14-June-21-onward" target="_blank" rel="noopener">Khaitan &amp; Co: ASCI</a>]</span> Education is ASCI's most non-compliant category. <span class="src">[<a href="https://www.storyboard18.com/advertising/illegal-betting-tops-ad-violations-in-h1-fy26-76-of-top-influencers-breach-norms-asci-83991.htm" target="_blank" rel="noopener">Storyboard18</a>]</span></li>
+    <li><b>What we do:</b> we review each post before it goes live and pay nothing for posts without a correct label.</li>
+  </ul>
+
+  <h3><span class="num">7.5</span>Claims on CU's own site</h3>
+  <p>ASCI's education guidelines require proof for recognition, placement and salary claims, and ban "100%" placement claims. <span class="src">[<a href="https://www.ascionline.in/wp-content/uploads/2023/05/ASCI-GUIDELINES-FOR-EDUCATIONAL-INSTITUTIONS-PROGRAMMES-AND-PLATFORMS.pdf" target="_blank" rel="noopener">ASCI education guidelines</a>]</span> Rankings must come from credible, independent bodies. <span class="src">[<a href="https://www.ascionline.in/wp-content/uploads/2022/09/asci-guidelines-for-usage-of-awards_rankings-in-advertisements.pdf" target="_blank" rel="noopener">ASCI awards and rankings</a>]</span> Several claims on CU Online's site need fixing before creators repeat them: <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a> · <a href="https://www.onlinecu.in/faq.php" target="_blank" rel="noopener">CU Online: FAQ</a> · <a href="https://www.onlinecu.in/aboutus.php" target="_blank" rel="noopener">CU Online: About</a>]</span></p>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:34%"><col style="width:30%"><col style="width:36%"></colgroup>
+    <tr><th>Claim on CU's site</th><th>Issue</th><th>Creator rule</th></tr>
+    <tr><td>"Degree Programs entitled by UGC"</td><td>Fine, if the UGC-DEB list confirms it for the intake</td><td>Use CU's exact wording</td></tr>
+    <tr><td>"NAAC A+" and "Top 5% NAAC A+ Accredited Universities"</td><td>"Top 5%" has no stated source</td><td>Say "NAAC A+" only</td></tr>
+    <tr><td>NIRF 2025: "19th among universities" in the banner, "27th" in the FAQ</td><td>The two numbers conflict</td><td>Use only the rank CU confirms, with category and year</td></tr>
+    <tr><td>"1st among top private Indian universities" in QS 2024 and 2025</td><td>Needs the exact ranking name</td><td>Use only with the ranking name and year</td></tr>
+    <tr><td>"300+ hiring partners", "increased chances of promotion and higher remuneration"</td><td>Placement and pay-type claims need evidence</td><td>Don't use without CU's proof. Never promise jobs or promotions</td></tr>
+    <tr><td>"70% of students say online learning is better"</td><td>No source given</td><td>Don't use</td></tr>
+    <tr><td>"WES recognized"</td><td>Needs a supporting document</td><td>Use only with CU's document</td></tr>
+  </table></div>
+
+  <h3><span class="num">7.6</span>No false urgency</h3>
+  <ul>
+    <li>CU's site shows a scholarship pop-up with "Claim Now (32 Seat Left)" and "Early-Bird Scholarship closing on 30 Oct". <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></li>
+    <li>The CCPA's dark-pattern guidelines (Nov 2023) ban "false urgency": falsely implying scarcity or time pressure to rush a purchase. <span class="src">[<a href="https://www.barandbench.com/view-point/ccpa-steps-in-to-curb-dark-patterns" target="_blank" rel="noopener">Bar &amp; Bench</a> · <a href="https://www.azbpartners.com/bank/a-new-dawn-for-dark-patterns/" target="_blank" rel="noopener">AZB &amp; Partners: dark patterns</a>]</span></li>
+    <li><b>What we do:</b> creators mention a deadline or seat limit only if CU confirms it's real on that date, and never run their own countdowns. CU's scholarship is open to everyone, so creators can't call it an exclusive creator deal.</li>
+  </ul>
+
+  <h3><span class="num">7.7</span>Third-party brands</h3>
+  <ul>
+    <li>CU advertises Harvard ManageMentor in all degree programmes, Harvard Business School Online's CORe for MBA students, Microsoft and AWS MCA tracks, and KPMG-backed courses. <span class="src">[<a href="https://www.onlinecu.in/aboutus.php" target="_blank" rel="noopener">CU Online: About</a> · <a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></li>
+    <li><b>What we do:</b> creators describe these exactly as CU does. They never imply a Harvard, Microsoft or AWS degree or endorsement, and never use those logos unless CU confirms it has the rights.</li>
+  </ul>
+
+  <h3><span class="num">7.8</span>Tax on creator payments</h3>
+  <ul>
+    <li>A share-of-fees payout is a <b>commission</b>. TDS on commission under Section 194H is 2% from 1 October 2024. <span class="src">[<a href="https://taxguru.in/income-tax/budget-2024-section-194h-tds-rate-cut-2-percent-october-1.html" target="_blank" rel="noopener">TaxGuru: 194H</a>]</span> Confirm the classification with tax advisers.</li>
+    <li>Free access and creator trips are benefits under Section 194R and attract TDS. <span class="src">[<a href="https://treelife.in/taxation/taxation-of-social-media-influencers/" target="_blank" rel="noopener">Treelife: 194R</a>]</span> Creators whose total income passes ₹20 lakh a year must register for GST. <span class="src">[<a href="https://www.cuelinks.com/blog/impact-gst-bloggers-affiliate-marketers-india/" target="_blank" rel="noopener">Cuelinks: GST</a>]</span></li>
+    <li><b>What we do:</b> collect PAN and GSTIN when creators join, deduct TDS on each payout, and record the value of any free access.</li>
+  </ul>
+
+  <h3><span class="num">7.9</span>Student data</h3>
+  <ul>
+    <li>CU's undergraduate programmes (BBA, BCA, BA JMC) are open straight after 10+2, <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span> so many leads are under 18. The DPDP Rules 2025 require a parent's verifiable consent before processing a child's data. <span class="src">[<a href="https://www.livelaw.in/amp/top-stories/digital-personal-data-protection-rules-2025-notified-309928" target="_blank" rel="noopener">LiveLaw</a>]</span> The notice and consent obligations take full effect on 13 May 2027. <span class="src">[<a href="https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/" target="_blank" rel="noopener">AZB &amp; Partners</a>]</span></li>
+    <li>CU's own form asks for consent to email, SMS and WhatsApp. <span class="src">[<a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a>]</span></li>
+    <li><b>What we do:</b> leads are captured only on our pages, with the same consent text as CU's form and an age question that triggers parental consent. Creators never collect student details themselves.</li>
+  </ul>
+
+  <h3><span class="num">7.10</span>What the creator contract must include</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:30%"><col style="width:70%"></colgroup>
+    <tr><th>Clause</th><th>What it says</th></tr>
+    <tr><td>Payout</td><td>A percentage of the net total fee, paid on the hybrid schedule (5.2). Commission is reversed for refunds within the refund window.</td></tr>
+    <tr><td>Approved claims only</td><td>Only CU-approved wording and the proof pack (7.5). No placement, salary, ranking or urgency claims outside the sheet.</td></tr>
+    <tr><td>Disclosure</td><td>An upfront label on every post (7.4). Missing the label means no payout for that post.</td></tr>
+    <tr><td>Review and take-down</td><td>We approve posts before they go live, and the creator edits or removes a post within 24 hours of a request.</td></tr>
+    <tr><td>Marketing only</td><td>The creator doesn't collect money, promise admission or act as a CU representative.</td></tr>
+    <tr><td>Brands</td><td>No Harvard, Microsoft, AWS or KPMG logos or implied endorsements (7.7).</td></tr>
+    <tr><td>Data</td><td>The creator collects no student data and sends all leads to the tracked page.</td></tr>
+    <tr><td>Tax</td><td>The creator provides PAN and GSTIN where applicable. TDS is deducted at source.</td></tr>
+    <tr><td>Indemnity and termination</td><td>The creator is responsible for their own claims. Either side can end the agreement immediately after a compliance breach.</td></tr>
+  </table></div>
+</section>
+
+<section id="plan">
+  <h2><span class="num">8.</span>Recommendation: CU Creator Programme</h2>
+  <h3><span class="num">8.1</span>What we build</h3>
+  <ul>
+    <li><b>Programme storefronts</b> (Chewy, LTK): each creator gets a page with their picks among CU programmes, a personal video and a counsellor button.</li>
+    <li><b>Link plus spoken code</b> (Chewy, Gymshark) for YouTube, lives and podcasts.</li>
+    <li><b>Creator dashboard</b> (Nykaa, Chewy): clicks, leads, applications, enrolments and payouts, updated from CU's CRM.</li>
+    <li><b>Videos on CU pages</b> (Amazon): the best creator videos appear on the matching onlinecu.in programme pages.</li>
+    <li><b>Deadline boosts</b> (Amazon Prime Day): one extra percentage point in the last two weeks before a real early-bird deadline (7.6).</li>
+  </ul>
+  <h3><span class="num">8.2</span>Three levels</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:18%"><col style="width:30%"><col style="width:32%"><col style="width:20%"></colgroup>
+    <tr><th>Level</th><th>Who</th><th>Payout</th><th>Modelled on</th></tr>
+    <tr><td>Open affiliate</td><td>Creators with 5K+ followers in tech, careers, finance, media or Class 12 guidance</td><td><b>5%</b> of net total fee, plus storefront and dashboard</td><td>Nykaa, Chewy</td></tr>
+    <tr><td>Rising</td><td>Open affiliates with 3+ enrolments a quarter</td><td><b>7%</b>, plus a monthly bonus for consistency and free masterclass access</td><td>Walmart, Myntra</td></tr>
+    <tr><td>Creator Squad</td><td>10–15 invited creators a year, chosen with testimonials from their followers</td><td><b>8%</b>, plus a fixed fee per video and CU faculty mentoring</td><td>Sephora Squad, Gymshark</td></tr>
+  </table></div>
+  <p>Alongside these, a <b>student and alumni track</b> (Myntra Glam Clan) has no follower minimum and runs on the existing Refer and Earn system.</p>
+  <h3><span class="num">8.3</span>Which creators for which programme</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:30%"><col style="width:40%"><col style="width:30%"></colgroup>
+    <tr><th>CU programmes</th><th>Creator niche</th><th>Angle</th></tr>
+    <tr><td>BCA, MCA (Microsoft, AWS tracks), M.Sc. Data Science</td><td>Coding, cloud, AI and data YouTubers and Instagram creators</td><td>Upskill in AI and cloud while working</td></tr>
+    <tr><td>MBA (27 specialisations), MBA Business Analytics</td><td>Career, LinkedIn, personal finance and corporate-life creators</td><td>An MBA without leaving your job</td></tr>
+    <tr><td>BBA, BCA, BA JMC</td><td>Class 12 and college-choice creators. <b>Audience is often under 18</b> (7.9)</td><td>A degree alongside work or exam preparation</td></tr>
+    <tr><td>BA JMC, MA JMC</td><td>Media, journalism and content creators</td><td>"I'm a creator: here's my degree"</td></tr>
+    <tr><td>MA English, MA Economics, M.Sc. Mathematics</td><td>Teachers, exam-prep and subject educators</td><td>A master's for teaching careers</td></tr>
+  </table></div>
+  <h3><span class="num">8.4</span>90-day pilot</h3>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:20%"><col style="width:80%"></colgroup>
+    <tr><th>Weeks</th><th>Work</th></tr>
+    <tr><td>1–3</td><td>Legal sign-off on fee-share pay (7.2), approved-claims sheet and proof pack, storefronts, codes and dashboard. Recruit 20 open affiliates and 5 Squad creators across MBA, BCA/MCA, BBA and JMC.</td></tr>
+    <tr><td>4–10</td><td>Content goes live. One creator day at CU's campus in Mohali. A deadline boost if a real early-bird deadline falls in the window. Weekly funnel review.</td></tr>
+    <tr><td>11–13</td><td>Compare cost per enrolment with paid ads. Move the best open affiliates up to Rising. Lock in rates for the next intake.</td></tr>
+  </table></div>
+</section>
+
+<section id="open">
+  <h2><span class="num">9.</span>Open questions</h2>
+  <ol class="oq-list">
+    <li><b>Budget.</b> What does CU pay us per enrolment? This sets the maximum percentage we can share with creators (5.3).</li>
+    <li><b>Fees.</b> CU's FAQ and Careers360 list different fees, e.g. MBA ₹2,00,000 versus ₹1.65 lakh. Which is current, and what are the fees for MCA, M.Sc. and MA (0.1)?</li>
+    <li><b>Net fee.</b> Do creator codes stack with the early-bird scholarship? Does the payout use the fee after scholarship (5.2)?</li>
+    <li><b>Schedule.</b> Will CU share fee-payment data so we can pay the year-2 portion (5.2)?</li>
+    <li><b>Fee-share pay.</b> Does counsel approve paying a percentage of fees per enrolment (7.2)?</li>
+    <li><b>Recognition.</b> Which online programmes are on the UGC-DEB list for the next intake (7.1)?</li>
+    <li><b>Claims.</b> Which NIRF rank should creators use, and does CU have proof for "300+ hiring partners" and WES recognition (7.5)?</li>
+    <li><b>Brands.</b> Can creators mention Harvard, Microsoft and AWS content, and how (7.7)?</li>
+    <li><b>Under-18 leads.</b> What is the parental consent flow for UG leads (7.9)?</li>
+  </ol>
+</section>
+
+<section id="sources">
+  <h2><span class="num">A.</span>Appendix: sources</h2>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:28%"><col style="width:72%"></colgroup>
+    <tr><th>Programme</th><th>Links</th></tr>
+    <tr><td>CU Online</td><td><a href="https://www.onlinecu.in/" target="_blank" rel="noopener">CU Online</a> · <a href="https://www.onlinecu.in/aboutus.php" target="_blank" rel="noopener">CU Online: About</a> · <a href="https://www.onlinecu.in/faq.php" target="_blank" rel="noopener">CU Online: FAQ</a> · <a href="https://www.careers360.com/colleges/chandigarh-university-online" target="_blank" rel="noopener">Careers360</a></td></tr>
+    <tr><td>Chewy</td><td><a href="https://chewpanions.chewy.com/" target="_blank" rel="noopener">Chewpanions</a> · <a href="https://www.retaildive.com/news/chewy-creator-storefronts-holiday-season/805118/" target="_blank" rel="noopener">Retail Dive</a> · <a href="https://www.netinfluencer.com/chewy-expands-creator-commerce-platform-to-600-influencers-ahead-of-holiday-pet-spending-surge/" target="_blank" rel="noopener">Net Influencer</a> · <a href="https://geniuslink.com/blog/chewy-affiliate-program/" target="_blank" rel="noopener">Geniuslink</a> · <a href="https://www.influencers-time.com/how-chewy-turned-nano-creators-into-a-tiktok-subscription-en/" target="_blank" rel="noopener">Influencers Time</a></td></tr>
+    <tr><td>Amazon</td><td><a href="https://viralvue.com/blog/how-much-do-amazon-influencers-make" target="_blank" rel="noopener">Viralvue</a> · <a href="https://creatorflow.so/blog/amazon-associates-vs-influencer-program/" target="_blank" rel="noopener">Creatorflow</a> · <a href="https://www.tubefilter.com/2025/07/03/amazon-prime-day-creator-commissions/" target="_blank" rel="noopener">Tubefilter</a> · <a href="https://hellopartner.com/amazon-doubles-influencer-commissions-ahead-of-extended-prime-day/" target="_blank" rel="noopener">Hello Partner</a> · <a href="https://loudcrowd.com/blog/amazon-influencer-program-everything-you-need-to-know/" target="_blank" rel="noopener">LoudCrowd</a></td></tr>
+    <tr><td>Sephora</td><td><a href="https://www.glossy.co/beauty/inside-sephoras-sephorasquad-influencer-ambassador-program/" target="_blank" rel="noopener">Glossy</a> · <a href="https://www.tubefilter.com/2021/06/07/sephorasquad-third-class-beauty-influencer-marketing-program/" target="_blank" rel="noopener">Tubefilter</a> · <a href="https://archive.com/blog/sephora-influencer-marketing-strategy" target="_blank" rel="noopener">Archive</a></td></tr>
+    <tr><td>Gymshark</td><td><a href="https://www.awin.com/us/news-and-events/program-news/new-affiliate-program-gymshark" target="_blank" rel="noopener">Awin</a> · <a href="https://www.affiliateroll.com/programs/gymshark" target="_blank" rel="noopener">AffiliateRoll</a> · <a href="https://bixgrow.com/gymshark-affiliate-program/" target="_blank" rel="noopener">BixGrow</a> · <a href="https://www.referly.so/affiliate-programs/gymshark" target="_blank" rel="noopener">Referly</a></td></tr>
+    <tr><td>Walmart</td><td><a href="https://corporate.walmart.com/news/2025/11/12/creators-at-the-core-evolving-the-walmart-creator-program-together" target="_blank" rel="noopener">Walmart corporate</a> · <a href="https://creatorflow.so/blog/walmart-creator-program/" target="_blank" rel="noopener">Creatorflow</a> · <a href="https://argil.ai/blog/walmart-affiliate-program-cd8f1" target="_blank" rel="noopener">Argil</a></td></tr>
+    <tr><td>LTK</td><td><a href="https://instantdm.com/blog/ltk-affiliate-program" target="_blank" rel="noopener">InstantDM</a></td></tr>
+    <tr><td>Myntra</td><td><a href="https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613" target="_blank" rel="noopener">Social Samosa</a> · <a href="https://joinotto.com/en-in/influencer-programs/myntra" target="_blank" rel="noopener">Otto</a></td></tr>
+    <tr><td>Nykaa</td><td><a href="https://affiliate.nykaa.com/" target="_blank" rel="noopener">Nykaa Affiliate</a> · <a href="https://www.buzzincontent.com/news/nykaa-says-it-has-indias-biggest-creator-army-and-the-numbers-are-massive-11081177" target="_blank" rel="noopener">BuzzInContent</a> · <a href="https://indiantelevision.com/news-headline/youtube-adds-nykaa-and-purplle-to-shopping-affiliate-programme-as-beauty-commerce-booms-251011/" target="_blank" rel="noopener">Indian Television</a></td></tr>
+    <tr><td>Coursera, MasterClass, Skillshare</td><td><a href="https://www.creator-hero.com/blog/coursera-affiliate-program-in-depth-review-pros-and-cons" target="_blank" rel="noopener">Coursera (Creator Hero)</a> · <a href="https://xark.io/resources/edtech-online-course-affiliate-programs-comparison-2026" target="_blank" rel="noopener">Coursera (Xark)</a> · <a href="https://whop.com/blog/creator-coursera-review/" target="_blank" rel="noopener">Coursera degrees (Whop)</a> · <a href="https://www.flexoffers.com/affiliate-programs/masterclass-affiliate-program/" target="_blank" rel="noopener">MasterClass (FlexOffers)</a> · <a href="https://ancaster.io/offers/skillshare" target="_blank" rel="noopener">Skillshare (Ancaster)</a> · <a href="https://blog.monetizedeal.com/skillshare-affiliate-program/" target="_blank" rel="noopener">Skillshare (Monetizedeal)</a></td></tr>
+    <tr><td>Legal (section 7)</td><td><a href="https://www.barandbench.com/view-point/ccpa-steps-in-to-curb-dark-patterns" target="_blank" rel="noopener">Bar &amp; Bench</a> · <a href="https://www.azbpartners.com/bank/a-new-dawn-for-dark-patterns/" target="_blank" rel="noopener">AZB &amp; Partners: dark patterns</a> · <a href="https://news.careers360.com/ugc-shares-precautions-for-students-taking-admission-in-online-odl-programmes" target="_blank" rel="noopener">Careers360: UGC precautions</a> · <a href="https://www.careers360.com/courses-certifications/articles/ugc-entitled-vs-ugc-recognised-online-degree" target="_blank" rel="noopener">Careers360: entitled vs recognised</a> · <a href="https://deb.ugc.ac.in/" target="_blank" rel="noopener">UGC-DEB</a> · <a href="https://news.careers360.com/ugc-warns-of-action-against-institutions-offer-online-programmes-in-ties-edtech-firms" target="_blank" rel="noopener">Careers360: UGC warning</a> · <a href="https://www.tribuneindia.com/news/jobscareers/ugc-aicte-warn-against-franchise-arrangement-between-colleges-ed-tech-companies-362042/amp" target="_blank" rel="noopener">Tribune</a> · <a href="https://nishithdesai.com/research-and-articles/hotline/education-sector-hotline/decoding-the-ugc-and-aictes-notices-on-franchising-and-mis-advertising-for-online-degree-programmes-5190" target="_blank" rel="noopener">Nishith Desai: UGC notices</a> · <a href="https://nishithdesai.com/research-and-articles/hotline/technology-law-analysis/guidelines-on-misleading-advertisements-and-endorsements-notified-under-the-consumer-protection-act-2019-6172" target="_blank" rel="noopener">Nishith Desai: CCPA guidelines</a> · <a href="https://ssrana.in/articles/new-endorsement-guidelines-social-media-influencers/" target="_blank" rel="noopener">S.S. Rana</a> · <a href="https://theleaflet.in/governance-and-policy/guidelines-mandate-social-media-influencers-to-make-clear-disclosures-on-endorsements" target="_blank" rel="noopener">The Leaflet</a> · <a href="https://khaitanco.com/sites/default/files/2023-02/Ergo_31012023.pdf" target="_blank" rel="noopener">Khaitan &amp; Co</a> · <a href="https://www.ascionline.in/social/wp-content/uploads/2024/03/ASCIs-Guide-For-Influencers-1.pdf" target="_blank" rel="noopener">ASCI guide for influencers</a> · <a href="https://www.socialsamosa.com/2021/02/asci-influencer-advertising-guidelines" target="_blank" rel="noopener">Social Samosa</a> · <a href="https://khaitanco.com/thought-leaderships/ASCI-releases-influencer-advertising-guidelines-for-digital-media-Effective-14-June-21-onward" target="_blank" rel="noopener">Khaitan &amp; Co: ASCI</a> · <a href="https://www.ascionline.in/wp-content/uploads/2023/05/ASCI-GUIDELINES-FOR-EDUCATIONAL-INSTITUTIONS-PROGRAMMES-AND-PLATFORMS.pdf" target="_blank" rel="noopener">ASCI education guidelines</a> · <a href="https://www.ascionline.in/wp-content/uploads/2022/09/asci-guidelines-for-usage-of-awards_rankings-in-advertisements.pdf" target="_blank" rel="noopener">ASCI awards and rankings</a> · <a href="https://taxguru.in/income-tax/budget-2024-section-194h-tds-rate-cut-2-percent-october-1.html" target="_blank" rel="noopener">TaxGuru: 194H</a> · <a href="https://treelife.in/taxation/taxation-of-social-media-influencers/" target="_blank" rel="noopener">Treelife: 194R</a> · <a href="https://www.cuelinks.com/blog/impact-gst-bloggers-affiliate-marketers-india/" target="_blank" rel="noopener">Cuelinks: GST</a> · <a href="https://www.livelaw.in/amp/top-stories/digital-personal-data-protection-rules-2025-notified-309928" target="_blank" rel="noopener">LiveLaw</a> · <a href="https://www.azbpartners.com/bank/update-indias-digital-personal-data-protection-framework-comes-into-effect/" target="_blank" rel="noopener">AZB &amp; Partners</a></td></tr>
+    <tr><td>Indian ad rules</td><td><a href="https://news.careers360.com/educational-institutes-edtech-companies-biggest-violators-of-advertising-code-asci-ads-healthcare-coaching-centres/amp" target="_blank" rel="noopener">ASCI education violations (Careers360)</a> · <a href="https://www.storyboard18.com/advertising/illegal-betting-tops-ad-violations-in-h1-fy26-76-of-top-influencers-breach-norms-asci-83991.htm" target="_blank" rel="noopener">ASCI H1 FY26 (Storyboard18)</a> · <a href="https://nishithdesai.com/research-and-articles/hotline/education-sector-hotline/decoding-the-ugc-and-aictes-notices-on-franchising-and-mis-advertising-for-online-degree-programmes-5190" target="_blank" rel="noopener">UGC franchising notices (Nishith Desai)</a></td></tr>
+    <tr><td>Related</td><td><a href="https://abhinavthak.github.io/influencer-affiliate-competitor-analysis/" target="_blank" rel="noopener">JGU Online version</a> · <a href="https://abhinavthak.github.io/refer-and-earn-prd/" target="_blank" rel="noopener">Refer and Earn PRD</a></td></tr>
+  </table></div>
+</section>
+
+<section id="changelog">
+  <h2><span class="num">B.</span>Appendix: change log</h2>
+  <div class="wrap"><table class="fixed"><colgroup><col style="width:22%"><col style="width:78%"></colgroup>
+    <tr><th>Version</th><th>Change</th></tr>
+    <tr><td>v1 · 29 Oct 2026</td><td>CU Online version, adapted from the <a href="https://abhinavthak.github.io/influencer-affiliate-competitor-analysis/" target="_blank" rel="noopener">JGU analysis</a> (v4). New: CU profile (0.1), share-of-fees payout model and calculator (5), CU site claims, urgency and brand checks (7.5–7.7), creator–programme matching (8.3).</td></tr>
+  </table></div>
+</section>
+
+  </main>
+</div>
+<script>
+// ---- Payout calculator (5.3): creator earns a % of the student's net total fee per paid enrolment ----
+(function(){
+  // Total programme fees as listed in CU Online's FAQ (5.2)
+  const PROGRAMMES = {
+    mba:   { label:'MBA', fee:200000 },
+    bca:   { label:'BCA', fee:165000 },
+    bba:   { label:'BBA', fee:156000 },
+    bajmc: { label:'BA JMC', fee:135000 },
+    majmc: { label:'MA JMC', fee:100000 }
+  };
+  const CREATORS = {
+    micro:  { label:'Micro creator', clicks:1500, c2l:5, l2e:4 },
+    mid:    { label:'Mid-tier creator', clicks:6000, c2l:3, l2e:3 },
+    alumni: { label:'Alumni referrer', clicks:60, c2l:30, l2e:15 }
+  };
+  const FIELDS = [
+    ['fee','Total programme fee','₹',5000],
+    ['schol','Scholarship or discount','% off fee',5],
+    ['pct','Creator payout','% of net fee',0.5],
+    ['clicks','Link clicks per month','clicks',100],
+    ['c2l','Click to lead','%',0.5],
+    ['l2e','Lead to paid enrolment','%',0.5],
+    ['refund','Refunds before payout','%',1]
+  ];
+  let s = Object.assign({ fee:200000, schol:0, pct:5, refund:10 }, CREATORS.micro);
+  let prog = 'mba', who = 'micro';
+  const inr = n => '₹' + Math.round(n).toLocaleString('en-IN');
+  const one = n => (Math.round(n*10)/10).toLocaleString('en-IN');
+  function render(){
+    const root = document.getElementById('calc-root'); if (!root) return;
+    const net = s.fee * (1 - s.schol/100);
+    const perEnr = net * s.pct / 100;
+    const leads = s.clicks * s.c2l / 100;
+    const enr = leads * s.l2e / 100 * (1 - s.refund/100);
+    const month = enr * perEnr;
+    const pBtns = Object.keys(PROGRAMMES).map(k => '<button data-g="'+k+'" class="'+(k===prog?'on':'')+'">'+PROGRAMMES[k].label+'</button>').join('');
+    const cBtns = Object.keys(CREATORS).map(k => '<button data-c="'+k+'" class="'+(k===who?'on':'')+'">'+CREATORS[k].label+'</button>').join('');
+    const ctl = FIELDS.map(([k,l,u,st]) => '<div class="ctl"><label>'+l+'</label><div class="field"><input type="number" min="0" step="'+st+'" data-k="'+k+'" value="'+s[k]+'"><span class="unit">'+u+'</span></div></div>').join('');
+    const note = 'The creator earns ' + inr(perEnr) + ' per paid enrolment: ' + one(s.pct) + '% of a ' + inr(net) + ' net fee. ' +
+      'Each 1% of this fee is ' + inr(net/100) + '. Under the hybrid schedule (5.2), ' + inr(perEnr*0.6) + ' is paid after the refund window and ' + inr(perEnr*0.4) + ' when the student starts year 2.';
+    root.innerHTML = '<div class="calc">'+
+      '<div class="calc-head"><div><h4>Creator payout per enrolment and per month</h4><p>Pick a programme and a creator type, then change any value.</p></div></div>'+
+      '<div class="presets" style="margin-bottom:8px">'+pBtns+'</div>'+
+      '<div class="presets" style="margin-bottom:16px">'+cBtns+'</div>'+
+      '<div class="controls">'+ctl+'</div>'+
+      '<div class="kpis">'+
+        '<div class="kpi"><div class="k">Net fee after scholarship</div><div class="v">'+inr(net)+'</div></div>'+
+        '<div class="kpi hl"><div class="k">Payout per enrolment</div><div class="v">'+inr(perEnr)+'</div></div>'+
+        '<div class="kpi"><div class="k">Leads per month</div><div class="v">'+one(leads)+'</div></div>'+
+        '<div class="kpi"><div class="k">Paid enrolments per month</div><div class="v">'+one(enr)+'</div></div>'+
+        '<div class="kpi hl"><div class="k">Creator earns per month</div><div class="v">'+inr(month)+'</div></div>'+
+      '</div>'+
+      '<div class="calc-result">'+note+'</div>'+
+      '<div class="calc-note">Fees are list prices from CU Online\'s FAQ, before scholarships. Conversion rates are planning assumptions, not measured data. Replace them with pilot results after week 10 (8.4).</div>'+
+    '</div>';
+    root.querySelectorAll('[data-k]').forEach(el => el.addEventListener('change', () => {
+      const v = Number(el.value); s[el.dataset.k] = isFinite(v) && v >= 0 ? v : 0;
+      if (el.dataset.k === 'fee') prog = null;
+      if (['clicks','c2l','l2e'].includes(el.dataset.k)) who = null;
+      setTimeout(render, 0);
+    }));
+    root.querySelectorAll('[data-g]').forEach(b => b.addEventListener('click', () => { prog = b.dataset.g; s.fee = PROGRAMMES[prog].fee; setTimeout(render, 0); }));
+    root.querySelectorAll('[data-c]').forEach(b => b.addEventListener('click', () => { who = b.dataset.c; const p = CREATORS[who]; s.clicks = p.clicks; s.c2l = p.c2l; s.l2e = p.l2e; setTimeout(render, 0); }));
+  }
+  render();
+})();
+</script>
+<script>
+// ---- Heading ids, table of contents, section links ----
+(function(){
+  const slug = n => 'sec-' + n.replace(/\.$/,'').replace(/\./g,'-');
+  const ids = {};
+  document.querySelectorAll('section').forEach(sec => {
+    sec.querySelectorAll('h2 .num, h3 .num').forEach(num => {
+      const n = num.textContent.trim().replace(/\.$/,'');
+      const h = num.parentElement;
+      if (h.tagName === 'H2') { ids[n] = sec.id; }
+      else { h.id = h.id || slug(n); ids[n] = h.id; }
+    });
+  });
+  // TOC
+  const toc = document.getElementById('toc-card');
+  let html = '<div class="toc-h">On this page</div>';
+  document.querySelectorAll('section').forEach(sec => {
+    const h2 = sec.querySelector('h2'); if (!h2) return;
+    const clone = h2.cloneNode(true);
+    clone.querySelectorAll('.tag').forEach(t => t.remove());
+    const num = clone.querySelector('.num');
+    const idx = num ? num.textContent.replace('.', '') : '';
+    const label = clone.textContent.replace(/^[0-9A-Z]+\.\s*/, '').trim();
+    let sub = '';
+    sec.querySelectorAll('h3').forEach(h3 => {
+      const c = h3.cloneNode(true); c.querySelectorAll('.tag').forEach(t => t.remove());
+      const n = c.querySelector('.num'); const nt = n ? n.textContent : '';
+      if (n) n.remove();
+      sub += '<a href="#' + h3.id + '" data-t="' + h3.id + '"><span class="idx">' + nt + '</span><span class="lbl">' + c.textContent.trim() + '</span></a>';
+    });
+    html += '<div class="grp" data-sec="' + sec.id + '"><a href="#' + sec.id + '" data-t="' + sec.id + '"><span class="idx">' + idx + '</span><span class="lbl">' + label + '</span></a>' + (sub ? '<div class="sub">' + sub + '</div>' : '') + '</div>';
+  });
+  toc.innerHTML = html;
+  // Scroll spy
+  const heads = Array.from(document.querySelectorAll('section > h2, section h3')).filter(h => h.closest('section'));
+  let ticking = false;
+  function spy(){
+    ticking = false;
+    let cur = heads[0];
+    for (const h of heads) { if (h.getBoundingClientRect().top < 140) cur = h; else break; }
+    if (!cur) return;
+    const sec = cur.closest('section');
+    toc.querySelectorAll('.grp').forEach(g => g.classList.toggle('open', g.dataset.sec === sec.id));
+    toc.querySelectorAll('a').forEach(a => a.classList.remove('on'));
+    const top = toc.querySelector('.grp[data-sec="' + sec.id + '"] > a'); if (top) top.classList.add('on');
+    if (cur.tagName === 'H3') { const s2 = toc.querySelector('.sub a[data-t="' + cur.id + '"]'); if (s2) s2.classList.add('on'); }
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, {passive:true});
+  spy();
+  // Clickable section references, e.g. (4.1), 3.4, (6)
+  const skip = el => el.closest('script,style,svg,code,a,button,input,select,textarea,#calc-root,.num,h2,h3,.toc');
+  const roots = [document.querySelector('.hero p'), document.getElementById('main')].filter(Boolean);
+  const re = /(\b\d{1,2}\.\d{1,2}\b)(?![\d%])|\((\d{1,2}|[AB])\)/g;
+  roots.forEach(root => {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: n => (!n.parentElement || skip(n.parentElement)) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      const t = node.nodeValue; re.lastIndex = 0; if (!re.test(t)) return; re.lastIndex = 0;
+      const frag = document.createDocumentFragment(); let last = 0, m, any = false;
+      while ((m = re.exec(t))) {
+        const key = m[1] || m[2]; const id = ids[key];
+        const before = t.slice(Math.max(0, m.index - 1), m.index);
+        if (!id || /[₹\d,.]/.test(before)) continue;
+        any = true;
+        const start = m[1] ? m.index : m.index + 1;
+        frag.appendChild(document.createTextNode(t.slice(last, start)));
+        const a = document.createElement('a'); a.className = 'xref'; a.href = '#' + id; a.textContent = key;
+        a.title = 'Go to ' + key;
+        frag.appendChild(a); last = start + key.length;
+      }
+      if (!any) return;
+      frag.appendChild(document.createTextNode(t.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  });
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a.xref'); if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1)); if (!el) return;
+    const h = el.tagName === 'SECTION' ? el.querySelector('h2') : el;
+    h.classList.remove('flash'); void h.offsetWidth; h.classList.add('flash');
+  });
+  // Print: open every collapsible
+  window.addEventListener('beforeprint', () => document.querySelectorAll('details').forEach(d => { d.dataset.wasOpen = d.open ? '1' : ''; d.open = true; }));
+  window.addEventListener('afterprint', () => document.querySelectorAll('details').forEach(d => { d.open = d.dataset.wasOpen === '1'; }));
+})();
+</script>
+</body>
+</html>
